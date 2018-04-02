@@ -253,11 +253,7 @@
                 <configuration>
                     <port>8080</port>
                     <path>/</path>
-                    <!--
-                    <url>http://47.95.215.116:8080/manager/text</url>
-                    <username>tomcat</username>
-                    <password>xiaowei9527</password>
--->
+
                 </configuration>
             </plugin>
         </plugins>
