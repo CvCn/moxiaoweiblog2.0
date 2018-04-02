@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  
+<mapper namespace="com.moxiaowei.blog.mapper.BlogMapper">
+	<insert id="addBlog">
+		insert into 
+			blog(id, title, content, creatdate, updatadate, remark, author)
+			values(#{blog.id}, #{blog.title}, #{blog.content}, #{blog.creatdate}, #{blog.updatadate}, #{blog.remark}, #{blog.author})
+	</insert>
+	<select id="getBlog" resultType="blog">
+		select id, title, remark, creatdate, updatadate, author from blog order by readcount desc
+	</select>
+	<select id="getBlogNew" resultType="blog">
+		select id, title, remark from blog order by creatdate desc
+	</select>
+	<select id="getBlogBy" resultType="blog">
+		select id, title, content, creatdate, updatadate, readcount, remark, author from blog
+		<if test="blog != null">
+		<where>
+			<if test="blog.id > 0">
+				and id = #{blog.id}
+			</if>
+			<if test="blog.title != null and blog.title != ''">
+			<bind name="blog.title" value="'%' + blog.title + '%'"/>
+				and title like #{blog.title}
+			</if>
+			<if test="blog.content != null and blog.content != ''">
+			<bind name="blog.content" value="'%' + blog.content + '%'"/>
+				and content like #{blog.content}
+			</if>
+		</where>
+		order by updatadate desc
+		</if>
+		
+	</select>
+	<select id="getBlogBy2" resultType="blog">
+		select id, title, updatadate, readcount, remark, author from blog
+		<if test="blog != null">
+		<where>
+			<if test="blog.id > 0">
+				and id = #{blog.id}
+			</if>
+			<if test="blog.title != null and blog.title != ''">
+			<bind name="blog.title" value="'%' + blog.title + '%'"/>
+				and title like #{blog.title}
+			</if>
+			<if test="blog.content != null and blog.content != ''">
+			<bind name="blog.content" value="'%' + blog.content + '%'"/>
+				and content like #{blog.content}
+			</if>
+		</where>
+		order by readcount desc
+		</if>
+		
+	</select>
+	<delete id="delBlog">
+		delete from blog where id=#{0}
+	</delete>
+	<update id="updataBlog">
+		update blog 
+		<if test="blog != null">
+		<set>
+			<if test="blog.title != null and blog.title != ''">
+				title=#{blog.title},
+			</if>
+			<if test="blog.remark != null and blog.remark != ''">
+				remark=#{blog.remark},
+			</if>
+			<if test="blog.content != null and blog.content != ''">
+				content=#{blog.content},
+			</if>
+			<if test="blog.updatadate != null and blog.updatadate != ''">
+				updatadate=#{blog.updatadate},
+			</if>
+			<if test="blog.author != null and blog.author != ''">
+				author=#{blog.author},
+			</if>
+		</set>
+		where id=#{blog.id}
+		</if>
+	</update>
+	<update id="addreadcount">
+		update blog set readcount = readcount + 1 where id=#{0}
+	</update>
+</mapper>

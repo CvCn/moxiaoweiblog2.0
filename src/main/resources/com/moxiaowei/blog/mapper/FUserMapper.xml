@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.moxiaowei.blog.mapper.FUserMapper">
+	<select id="getFUserBy" resultType="fuser">
+		select * from fuser
+		<where>
+			<if test="id > 0">
+				and id=#{id}
+			</if>
+			<if test="uid != null and uid != ''">
+				and uid=#{uid}
+			</if>
+			<if test="accesstoken != null and accesstoken != '' ">
+				and accesstoken=#{accesstoken}
+			</if>
+		</where>
+	</select>
+	<insert id="addFUser">
+		insert into
+		fuser(id, createdate, lastlogin, username,
+		accesstoken, uid, img, remark, third)
+		values(#{u.id}, #{u.createdate},
+		#{u.lastlogin}, #{u.username},
+		#{u.accesstoken}, #{u.uid}, #{u.img},
+		#{u.remark}, #{u.third})
+	</insert>
+	<delete id="delFUser">
+		delete from fuser where accesstoken=#{0}
+	</delete>
+	<update id="updFUser">
+		update fuser
+		<set>
+			<if test="u.accesstoken != null and u.accesstoken">
+				accesstoken = #{u.accesstoken},
+			</if>
+			<if test="u.uid != null and u.uid != ''">
+				uid = #{u.uid},
+			</if>
+			<if test="u.username != null and u.username != ''">
+				username = #{u.username},
+			</if>
+			<if test="u.img != null and u.img != ''">
+				img = #{u.img},
+			</if>
+			<if test="u.remark != null and u.remark != ''">
+				remark = #{u.remark},
+			</if>
+			<if test="u.lastlogin != null">
+				lastlogin = #{u.lastlogin}
+			</if>
+		</set>
+		where id = #{u.id}
+	</update>
+</mapper>

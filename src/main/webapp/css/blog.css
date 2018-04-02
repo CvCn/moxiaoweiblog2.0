@@ -1,0 +1,573 @@
+body {
+	background-color: #F5F5F5;
+}
+
+.minHeight {
+	min-height: 700px;
+}
+
+.bg-index {
+	background-color: #F2F2F2;
+}
+
+.notice {
+	padding: 0px 30px 0px 30px;
+	margin-top: 45px;
+	text-align: center;
+}
+
+.navbar .nav>li .dropdown-menu {
+	margin: 0;
+}
+
+.navbar .nav>li:hover .dropdown-menu {
+	display: block;
+}
+
+.btn-login {
+	padding: 1em;
+	margin-top: 1em;
+	margin: 1em;
+	font-size: 1.1em;
+}
+
+.navbar-nav>li>a {
+	padding-top: 13px;
+	padding-bottom: 10px;
+}
+
+.navbar-brand {
+	height: 40px;
+	padding-top: 11px;
+}
+
+.nav .form-control {
+	height: 27px;
+	margin-top: 2px;
+	padding: 1px 5px 1px 5px;
+}
+
+.nav .btn-default {
+	padding: 3px 8px 3px 8px;
+	height: 27px;
+	margin-top: 2px;
+}
+
+.navbar {
+	min-height: 40px;
+}
+
+.navbar-toggle {
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+.to-top {
+	border: 1px solid #222222;
+	padding-left: 5px;
+	padding-right: 7px;
+	font-size: 1.7em;
+	color: #222222;
+	z-index: 2;
+	border-radius: 4px;
+	background-color: #f3f3f3;
+	-o-transition-property: border-color, color, background-color;
+	-o-transition-duration: 0.5s, 0.5s, 0.5s;
+	-moz-transition-property: border-color, color, background-color;
+	-moz-transition-duration: 0.5s, 0.5s, 0.5s;
+	transition-property: border-color, color, background-color;
+	transition-duration: 0.5s, 0.5s, 0.5s;
+}
+
+.to-top:hover {
+	text-decoration: none;
+	border-color: #297aa0;
+	color: #297aa0;
+	background-color: #F2F2F2;
+}
+
+.connect {
+	height: 100px;
+	margin-left: 10%;
+	-o-transition-property: height, -o-transform,;
+	-o-transition-duration: 0.7s, 0.7s;
+	-moz-transition-property: height, -o-transform;
+	-moz-transition-duration: 0.7s, 0.7s;
+	transition-property: height, transform;
+	transition-duration: 0.7s, 0.7s;
+}
+
+.connect:hover {
+	transform: rotate(360deg);
+	height: 250px;
+}
+
+.grow {
+	background-color: black;
+	color: white;
+}
+
+.tb-bottom-td {
+	padding: 5px 2% 0 2%;
+	width: 1200px;
+	border-right: 1px solid #1c1c1c;
+	border-bottom: 1px solid #1c1c1c;
+}
+
+.none-s {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.top {
+	padding: 4px;
+	margin: 3px;
+	background-color: #ff0000;
+	color: white;
+	font-weight: bold;
+	font-size: 14px;
+	font-style: oblique;
+}
+
+.suff {
+	color: #ff0000;
+	font-style: oblique;
+	font-weight: bold;
+}
+
+.trans-div {
+	border: 1px solid #E6E6E6;
+	background-color: #F3F3F3;
+	-moz-border-radius: 7px;
+	border-radius: 6px;
+	width: 100%;
+	-o-transition-property: margin;
+	-o-transition-duration: 0.3s;
+	-moz-transition-property: margin;
+	-moz-transition-duration: 0.3s;
+	transition-property: margin;
+	transition-duration: 0.3s;
+}
+
+.trans-div:hover {
+	margin-left: -5px;
+	background-color: #F5F5F5;
+}
+
+.title {
+	color: black;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 180%;
+	letter-spacing: 1px;
+}
+
+.remark {
+	line-height: 200%;
+	letter-spacing: 1px;
+	word-wrap: break-word;
+}
+
+.button {
+	position: relative;
+	cursor: pointer;
+	color: black;
+	font-family: "Lato";
+	font-size: 1.5em;
+	padding: 0.2em 0.7em 0.35em;
+}
+
+.button .inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.button:before, .button:after, .button .inner:before, .button .inner:after
+	{
+	background-color: #ff0000;
+}
+
+.button:before, .button:after, .button .inner:before, .button .inner:after
+	{
+	position: absolute;
+	content: "";
+	display: block;
+	-webkit-transition: -webkit-transform 0.382s;
+	transition: -webkit-transform 0.382s;
+	transition: transform 0.382s;
+	transition: transform 0.382s, -webkit-transform 0.382s;
+}
+
+.button.horizontal:before, .button.horizontal:after, .button.both:before,
+	.button.both:after {
+	left: 0;
+	width: 100%;
+	height: 2px;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+}
+
+.button.horizontal .inner:before, .button.horizontal .inner:after,
+	.button.both .inner:before, .button.both .inner:after {
+	top: 0;
+	width: 2px;
+	height: 100%;
+	-webkit-transform: scaleY(0);
+	transform: scaleY(0);
+}
+
+.button.horizontal .inner:before, .button.both .inner:before {
+	left: 0;
+}
+
+.button.horizontal .inner:after, .button.both .inner:after {
+	right: 0;
+}
+
+.button.horizontal .inner:hover:before, .button.horizontal .inner:hover:after,
+	.button.both .inner:hover:before, .button.both .inner:hover:after {
+	-webkit-transform: scaleY(1);
+	transform: scaleY(1);
+}
+
+.button.horizontal:before, .button.both:before {
+	top: 0;
+}
+
+.button.horizontal:after, .button.both:after {
+	bottom: 0;
+}
+
+.button.horizontal:hover:before, .button.horizontal:hover:after, .button.both:hover:before,
+	.button.both:hover:after {
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
+
+.button.horizontal:hover .inner:before, .button.horizontal:hover .inner:after,
+	.button.both:hover .inner:before, .button.both:hover .inner:after {
+	-webkit-transform: scaleY(1);
+	transform: scaleY(1);
+}
+
+.button.horizontal.clockwise .inner:before, .button.both.clockwise .inner:before
+	{
+	-webkit-transform-origin: top center;
+	transform-origin: top center;
+}
+
+.button.horizontal.clockwise .inner:after, .button.both.clockwise .inner:after
+	{
+	-webkit-transform-origin: bottom center;
+	transform-origin: bottom center;
+}
+
+.button.horizontal.clockwise:before, .button.both.clockwise:before {
+	-webkit-transform-origin: right center;
+	transform-origin: right center;
+}
+
+.button.horizontal.clockwise:after, .button.both.clockwise:after {
+	-webkit-transform-origin: left center;
+	transform-origin: left center;
+}
+
+.button.horizontal.clockwise:hover .inner:before, .button.both.clockwise:hover .inner:before
+	{
+	-webkit-transform-origin: bottom center;
+	transform-origin: bottom center;
+}
+
+.button.horizontal.clockwise:hover .inner:after, .button.both.clockwise:hover .inner:after
+	{
+	-webkit-transform-origin: top center;
+	transform-origin: top center;
+}
+
+.button.horizontal.clockwise:hover:before, .button.both.clockwise:hover:before
+	{
+	-webkit-transform-origin: left center;
+	transform-origin: left center;
+}
+
+.button.horizontal.clockwise:hover:after, .button.both.clockwise:hover:after
+	{
+	-webkit-transform-origin: right center;
+	transform-origin: right center;
+}
+
+.button.horizontal.counterclockwise .inner:before, .button.both.counterclockwise .inner:before
+	{
+	-webkit-transform-origin: bottom center;
+	transform-origin: bottom center;
+}
+
+.button.horizontal.counterclockwise .inner:after, .button.both.counterclockwise .inner:after
+	{
+	-webkit-transform-origin: top center;
+	transform-origin: top center;
+}
+
+.button.horizontal.counterclockwise:before, .button.both.counterclockwise:before
+	{
+	-webkit-transform-origin: left center;
+	transform-origin: left center;
+}
+
+.button.horizontal.counterclockwise:after, .button.both.counterclockwise:after
+	{
+	-webkit-transform-origin: right center;
+	transform-origin: right center;
+}
+
+.button.horizontal.counterclockwise:hover .inner:before, .button.both.counterclockwise:hover .inner:before
+	{
+	-webkit-transform-origin: top center;
+	transform-origin: top center;
+}
+
+.button.horizontal.counterclockwise:hover .inner:after, .button.both.counterclockwise:hover .inner:after
+	{
+	-webkit-transform-origin: bottom center;
+	transform-origin: bottom center;
+}
+
+.button.horizontal.counterclockwise:hover:before, .button.both.counterclockwise:hover:before
+	{
+	-webkit-transform-origin: right center;
+	transform-origin: right center;
+}
+
+.button.horizontal.counterclockwise:hover:after, .button.both.counterclockwise:hover:after
+	{
+	-webkit-transform-origin: left center;
+	transform-origin: left center;
+}
+
+.button.vertical:before, .button.vertical:after {
+	top: 0;
+	width: 2px;
+	height: 100%;
+	-webkit-transform: scaleY(0);
+	transform: scaleY(0);
+}
+
+.button.vertical:before {
+	left: 0;
+}
+
+.button.vertical:after {
+	right: 0;
+}
+
+.button.vertical:hover:before, .button.vertical:hover:after {
+	-webkit-transform: scaleY(1);
+	transform: scaleY(1);
+}
+
+.button.vertical.clockwise:before {
+	-webkit-transform-origin: top center;
+	transform-origin: top center;
+}
+
+.button.vertical.clockwise:after {
+	-webkit-transform-origin: bottom center;
+	transform-origin: bottom center;
+}
+
+.button.vertical.clockwise:hover:before {
+	-webkit-transform-origin: bottom center;
+	transform-origin: bottom center;
+}
+
+.button.vertical.clockwise:hover:after {
+	-webkit-transform-origin: top center;
+	transform-origin: top center;
+}
+
+.button.vertical.counterclockwise:before {
+	-webkit-transform-origin: bottom center;
+	transform-origin: bottom center;
+}
+
+.button.vertical.counterclockwise:after {
+	-webkit-transform-origin: top center;
+	transform-origin: top center;
+}
+
+.button.vertical.counterclockwise:hover:before {
+	-webkit-transform-origin: top center;
+	transform-origin: top center;
+}
+
+.button.vertical.counterclockwise:hover:after {
+	-webkit-transform-origin: bottom center;
+	transform-origin: bottom center;
+}
+
+.codepen-link {
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	height: 40px;
+	width: 40px;
+	z-index: 10;
+	border-radius: 50%;
+	box-sizing: border-box;
+	background-image: url("");
+	background-position: center center;
+	background-size: cover;
+	opacity: 0.5;
+	-webkit-transition: all 0.25s;
+	transition: all 0.25s;
+}
+
+.codepen-link:hover {
+	opacity: 0.8;
+	box-shadow: 0 0 6px #efefef;
+}
+
+/* 加载动画 */
+.cp-spinner-block {
+	display: inline-block;
+	width: 40%;
+	margin: 10px 20px;
+}
+
+.cp-spinner-block span {
+	color: #4a5b6c;
+	display: block;
+	padding: 5px 0px;
+}
+
+.cp-spinner-block pre {
+	font-size: .75em;
+	background-color: #f0f0f0;
+	padding: 4px 7px;
+	border-radius: 2px;
+	font-family: "Lucida Console", Monaco, monospace;
+	display: inline-block;
+	white-space: pre-wrap;
+}
+
+@media only screen and (max-width: 1024px) {
+	.cp-wrapper {
+		width: 100%;
+	}
+	.cp-spinner-block {
+		display: block;
+		width: 90%;
+		margin: 40px 5%;
+	}
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1400px) {
+	.cp-wrapper {
+		width: 70%;
+	}
+	.cp-spinner-block {
+		margin: 5px auto;
+	}
+}
+
+@media only screen and (min-width: 1500px) {
+	.cp-wrapper {
+		width: 90%;
+	}
+	.cp-spinner-block {
+		display: inline-block;
+		width: 30%;
+		margin: 10px 20px;
+	}
+}
+
+@media only screen and (min-width: 1700px) {
+	.cp-wrapper {
+		width: 70%;
+	}
+	.cp-spinner-block {
+		display: inline-block;
+		width: 30%;
+		margin: 10px 20px;
+	}
+}
+
+.cp-spinner {
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	box-sizing: border-box;
+	position: relative;
+}
+/*Skeleton Spinner*/
+.cp-skeleton {
+	width: 38px;
+	height: 38px;
+	display: inline-block;
+	box-sizing: border-box;
+	border-radius: 50%;
+	border-top: solid 6px #f56151;
+	border-right: solid 6px transparent;
+	border-bottom: solid 6px transparent;
+	border-left: solid 6px transparent;
+	animation: cp-skeleton-animate 0.618s linear infinite;
+}
+
+.cp-skeleton:before {
+	border-radius: 50%;
+	content: " ";
+	width: 38px;
+	height: 38px;
+	display: inline-block;
+	box-sizing: border-box;
+	border-top: solid 6px transparent;
+	border-right: solid 6px transparent;
+	border-bottom: solid 6px transparent;
+	border-left: solid 6px #f56151;
+	position: absolute;
+	top: -6px;
+	left: -6px;
+	transform: rotateZ(-30deg);
+}
+
+.cp-skeleton:after {
+	border-radius: 50%;
+	content: " ";
+	width: 38px;
+	height: 38px;
+	display: inline-block;
+	box-sizing: border-box;
+	border-top: solid 6px transparent;
+	border-right: solid 6px #f56151;
+	border-bottom: solid 6px transparent;
+	border-left: solid 6px transparent;
+	position: absolute;
+	top: -6px;
+	right: -6px;
+	transform: rotateZ(30deg);
+}
+/*Skeleton Spinner Animation*/
+@
+keyframes cp-skeleton-animate { 0% {
+	transform: rotate(0deg);
+}
+100%
+{
+transform
+:
+ 
+rotate
+(360deg);
+
+  	
+}
+}
+}
+/* //加载动画 */

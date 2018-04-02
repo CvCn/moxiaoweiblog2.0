@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<!-- 加载属性文件 -->
+	<context:property-placeholder location="classpath:resource/*.properties" />
+
+	<!-- 数据库连接池 -->
+	<bean id="dataSource" destroy-method="close"
+		class="com.alibaba.druid.pool.DruidDataSource">
+		<property name="driverClassName" value="${jdbc.driver}"></property>
+		<property name="url" value="${jdbc.url}"></property>
+		<property name="username" value="${jdbc.username}"></property>
+		<property name="password" value="${jdbc.password}"></property>
+		<!-- 最大活跃连接数 -->
+		<property name="maxActive" value="${droid.maxActive}"></property>
+		<property name="maxIdle" value="${droid.maxIdle}"></property>
+		<property name="minIdle" value="${droid.minIdle}"></property>
+	</bean>
+
+	<!-- SqlSessionFactoryBean -->
+	<bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<!-- 给sessionFactory设置数据源 -->
+		<property name="dataSource" ref="dataSource"></property>
+		<!-- 设置mybatis配置文件的位置 -->
+		<property name="configLocation" value="classpath:mybatis/mybatisConfig.xml"></property>
+	</bean>
+
+	<!-- MapperScannerConfigurer -->
+	<!-- 扫描mapper的class文件和映射文件，生成接口的实现类对象，并让spring管理起来 -->
+	<!-- 一个mapper的代理对象对应一个spring的ID：mapper接口类名首字母小写 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<!-- 设置mapper文件所在的包，该类会扫描这些指定的包中的接口和映射文件，生成接口的实现类对象放到spring中 -->
+		<!-- UserMapper.java + UserMapper.xml = uesrMaper的spring中的bean -->
+		<!-- 该bean就是接口的实现类对象 -->
+		<property name="basePackage" value="com.moxiaowei.blog.mapper"></property>
+		<property name="sqlSessionFactoryBeanName" value="sessionFactory"></property>
+	</bean>
+
+
+
+
+
+
+
+
+
+</beans>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:component-scan base-package="com.moxiaowei.blog.controller" />
+	<context:component-scan base-package="com.moxiaowei.blog.interceptor" />
+	<context:component-scan base-package="com.moxiaowei.blog.ws" />
+	<!-- 加载属性文件 -->
+	<context:property-placeholder location="classpath:resource/*.properties" />
+
+	<mvc:annotation-driven conversion-service="conversionService">
+		<!-- 关闭忽略后缀 -->
+		<mvc:path-matching suffix-pattern="false" />
+	</mvc:annotation-driven>
+	<mvc:default-servlet-handler />
+
+	<bean id="conversionService"
+		class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+		<property name="registerDefaultFormatters" value="false"></property>
+		<property name="formatterRegistrars">
+			<set>
+				<bean class="org.springframework.format.datetime.DateFormatterRegistrar">
+					<property name="formatter" ref="dateFormatter"></property>
+				</bean>
+			</set>
+		</property>
+	</bean>
+
+	<bean id="dateFormatter" class="org.springframework.format.datetime.DateFormatter">
+		<property name="pattern" value="yyyy-MM-dd"></property>
+	</bean>
+
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="utf-8"></property>
+		<property name="maxInMemorySize" value="5242880"></property>
+	</bean>
+	<bean id="exceptionResolver"
+		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="exceptionMappings">
+			<props>
+				<prop
+					key="org.springframework.web.multipart.MaxUploadSizeExceededException">/error</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/api/blog/*.*" />
+			<mvc:mapping path="/api/blog/*" />
+			<mvc:mapping path="/api/third/weibo/login" />
+			<mvc:mapping path="/api/third/qq/login" />
+			<bean class="com.moxiaowei.blog.interceptor.AccessInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
+	
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/api/user/**" />
+			<mvc:exclude-mapping path="/api/user/login" />
+			<bean class="com.moxiaowei.blog.interceptor.UserInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
+
+</beans>

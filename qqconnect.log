@@ -1,0 +1,662 @@
+1752071 DEBUG [2018-04-02 12:38:27]  Invoking ResponseBodyAdvice chain for body=RestMassage [code=200, json=Page{count=true, pageNum=5, pageSize=5, startRow=20, endRow=25, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1752086 DEBUG [2018-04-02 12:38:27]  After ResponseBodyAdvice chain body=RestMassage [code=200, json=Page{count=true, pageNum=5, pageSize=5, startRow=20, endRow=25, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1752086 DEBUG [2018-04-02 12:38:27]  Invoking ResponseBodyAdvice chain for body=RestMassage [code=200, json=Page{count=true, pageNum=4, pageSize=5, startRow=15, endRow=20, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1752086 DEBUG [2018-04-02 12:38:27]  After ResponseBodyAdvice chain body=RestMassage [code=200, json=Page{count=true, pageNum=4, pageSize=5, startRow=15, endRow=20, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1752086 DEBUG [2018-04-02 12:38:27]  Written [RestMassage [code=200, json=Page{count=true, pageNum=5, pageSize=5, startRow=20, endRow=25, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]] as "application/json;charset=utf-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@8216164]
+1752086 DEBUG [2018-04-02 12:38:27]  Null ModelAndView returned to DispatcherServlet with name 'DispatcherServlet': assuming HandlerAdapter completed request handling
+1752086 DEBUG [2018-04-02 12:38:27]  Written [RestMassage [code=200, json=Page{count=true, pageNum=4, pageSize=5, startRow=15, endRow=20, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]] as "application/json;charset=utf-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@8216164]
+1752086 DEBUG [2018-04-02 12:38:27]  Successfully completed request
+1752086 DEBUG [2018-04-02 12:38:27]  Null ModelAndView returned to DispatcherServlet with name 'DispatcherServlet': assuming HandlerAdapter completed request handling
+1752086 DEBUG [2018-04-02 12:38:27]  Successfully completed request
+1786451 DEBUG [2018-04-02 12:39:01]  DispatcherServlet with name 'DispatcherServlet' processing GET request for [/api/fuser]
+1786451 DEBUG [2018-04-02 12:39:01]  Looking up handler method for path /api/fuser
+1786451 DEBUG [2018-04-02 12:39:01]  Returning handler method [public com.moxiaowei.blog.util.RestMessage<com.moxiaowei.blog.pojo.FUser> com.moxiaowei.blog.controller.FUserController.getUser(javax.servlet.http.HttpServletRequest)]
+1786451 DEBUG [2018-04-02 12:39:01]  Returning cached instance of singleton bean 'FUserController'
+1786451 DEBUG [2018-04-02 12:39:01]  Last-Modified value for [/api/fuser] is: -1
+1786451 DEBUG [2018-04-02 12:39:01]  Creating new transaction with name [com.moxiaowei.blog.service.impl.ThirdPartyServiceImpl.getFUser]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+1786451 DEBUG [2018-04-02 12:39:01]  Acquired Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] for JDBC transaction
+1786451 DEBUG [2018-04-02 12:39:01]  Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] read-only
+1786451 DEBUG [2018-04-02 12:39:01]  Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] to manual commit
+1786451 DEBUG [2018-04-02 12:39:01]  Initiating transaction commit
+1786467 DEBUG [2018-04-02 12:39:01]  Committing JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1786467 DEBUG [2018-04-02 12:39:01]  Resetting read-only flag of JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1786467 DEBUG [2018-04-02 12:39:01]  Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] after transaction
+1786467 DEBUG [2018-04-02 12:39:01]  Returning JDBC Connection to DataSource
+1786467 DEBUG [2018-04-02 12:39:01]  Invoking ResponseBodyAdvice chain for body=RestMassage [code=400, json=null]
+1786467 DEBUG [2018-04-02 12:39:01]  After ResponseBodyAdvice chain body=RestMassage [code=400, json=null]
+1786467 DEBUG [2018-04-02 12:39:01]  Written [RestMassage [code=400, json=null]] as "application/json;charset=utf-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@8216164]
+1786467 DEBUG [2018-04-02 12:39:01]  Null ModelAndView returned to DispatcherServlet with name 'DispatcherServlet': assuming HandlerAdapter completed request handling
+1786467 DEBUG [2018-04-02 12:39:01]  Successfully completed request
+1786482 DEBUG [2018-04-02 12:39:01]  DispatcherServlet with name 'DispatcherServlet' processing GET request for [/api/notice]
+1786482 DEBUG [2018-04-02 12:39:01]  Looking up handler method for path /api/notice
+1786482 DEBUG [2018-04-02 12:39:01]  Returning handler method [public com.moxiaowei.blog.util.RestMessage<java.lang.String> com.moxiaowei.blog.controller.PageController.notice()]
+1786482 DEBUG [2018-04-02 12:39:01]  Returning cached instance of singleton bean 'pageController'
+1786482 DEBUG [2018-04-02 12:39:01]  Last-Modified value for [/api/notice] is: -1
+1786482 DEBUG [2018-04-02 12:39:01]  Creating new transaction with name [com.moxiaowei.blog.service.impl.NoticeServiceImpl.getNotice]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+1786482 DEBUG [2018-04-02 12:39:01]  Acquired Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] for JDBC transaction
+1786482 DEBUG [2018-04-02 12:39:01]  Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] read-only
+1786482 DEBUG [2018-04-02 12:39:01]  Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] to manual commit
+1786513 DEBUG [2018-04-02 12:39:01]  DispatcherServlet with name 'DispatcherServlet' processing GET request for [/api/blogNew]
+1786513 DEBUG [2018-04-02 12:39:01]  Looking up handler method for path /api/blogNew
+1786513 DEBUG [2018-04-02 12:39:01]  Returning handler method [public com.moxiaowei.blog.util.RestMessage<com.moxiaowei.blog.pojo.Blog> com.moxiaowei.blog.controller.BlogController.getBlogNew()]
+1786513 DEBUG [2018-04-02 12:39:01]  Returning cached instance of singleton bean 'blogController'
+1786513 DEBUG [2018-04-02 12:39:01]  Last-Modified value for [/api/blogNew] is: -1
+1786513 DEBUG [2018-04-02 12:39:01]  Creating new transaction with name [com.moxiaowei.blog.service.impl.BlogServiceImpl.getBlogNew]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+1786513 DEBUG [2018-04-02 12:39:01]  Acquired Connection [com.mysql.jdbc.JDBC4Connection@5d00e773] for JDBC transaction
+1786513 DEBUG [2018-04-02 12:39:01]  Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@5d00e773] read-only
+1786513 DEBUG [2018-04-02 12:39:01]  Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@5d00e773] to manual commit
+1786513 DEBUG [2018-04-02 12:39:01]  DispatcherServlet with name 'DispatcherServlet' processing GET request for [/api/blogList/1]
+1786529 DEBUG [2018-04-02 12:39:01]  Looking up handler method for path /api/blogList/1
+1786529 DEBUG [2018-04-02 12:39:01]  Creating a new SqlSession
+1786529 DEBUG [2018-04-02 12:39:01]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fc710ea]
+1786529 DEBUG [2018-04-02 12:39:01]  JDBC Connection [com.mysql.jdbc.JDBC4Connection@5d00e773] will be managed by Spring
+1786529 DEBUG [2018-04-02 12:39:01]  Returning handler method [public com.moxiaowei.blog.util.RestMessage<java.util.List<com.moxiaowei.blog.pojo.Blog>> com.moxiaowei.blog.controller.BlogController.getBlogListAsyn(int)]
+1786529 DEBUG [2018-04-02 12:39:01]  ==>  Preparing: SELECT count(*) FROM blog 
+1786529 DEBUG [2018-04-02 12:39:01]  Returning cached instance of singleton bean 'blogController'
+1786529 DEBUG [2018-04-02 12:39:01]  ==> Parameters: 
+1786529 DEBUG [2018-04-02 12:39:01]  Last-Modified value for [/api/blogList/1] is: -1
+1786529 DEBUG [2018-04-02 12:39:01]  Creating new transaction with name [com.moxiaowei.blog.service.impl.BlogServiceImpl.getBlog]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+1786529 DEBUG [2018-04-02 12:39:01]  <==      Total: 1
+1786529 DEBUG [2018-04-02 12:39:01]  Acquired Connection [com.mysql.jdbc.JDBC4Connection@256c7878] for JDBC transaction
+1786529 DEBUG [2018-04-02 12:39:01]  Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@256c7878] read-only
+1786529 DEBUG [2018-04-02 12:39:01]  Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@256c7878] to manual commit
+1786529 DEBUG [2018-04-02 12:39:01]  ==>  Preparing: select id, title, remark from blog order by creatdate desc limit ?,? 
+1786529 DEBUG [2018-04-02 12:39:01]  ==> Parameters: 0(Integer), 1(Integer)
+1786529 DEBUG [2018-04-02 12:39:01]  Creating a new SqlSession
+1786529 DEBUG [2018-04-02 12:39:01]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@590b3f35]
+1786529 DEBUG [2018-04-02 12:39:01]  JDBC Connection [com.mysql.jdbc.JDBC4Connection@256c7878] will be managed by Spring
+1786529 DEBUG [2018-04-02 12:39:01]  ==>  Preparing: SELECT count(*) FROM blog 
+1786529 DEBUG [2018-04-02 12:39:01]  ==> Parameters: 
+1786529 DEBUG [2018-04-02 12:39:01]  <==      Total: 1
+1786529 DEBUG [2018-04-02 12:39:01]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fc710ea]
+1786529 DEBUG [2018-04-02 12:39:01]  Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fc710ea]
+1786529 DEBUG [2018-04-02 12:39:01]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fc710ea]
+1786529 DEBUG [2018-04-02 12:39:01]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fc710ea]
+1786529 DEBUG [2018-04-02 12:39:01]  Initiating transaction commit
+1786529 DEBUG [2018-04-02 12:39:01]  Committing JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@5d00e773]
+1786529 DEBUG [2018-04-02 12:39:01]  <==      Total: 1
+1786529 DEBUG [2018-04-02 12:39:01]  ==>  Preparing: select id, title, remark, creatdate, updatadate, author from blog order by readcount desc limit ?,? 
+1786529 DEBUG [2018-04-02 12:39:01]  ==> Parameters: 0(Integer), 5(Integer)
+1786529 DEBUG [2018-04-02 12:39:01]  Resetting read-only flag of JDBC Connection [com.mysql.jdbc.JDBC4Connection@5d00e773]
+1786529 DEBUG [2018-04-02 12:39:01]  Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@5d00e773] after transaction
+1786529 DEBUG [2018-04-02 12:39:01]  Returning JDBC Connection to DataSource
+1786529 DEBUG [2018-04-02 12:39:01]  Invoking ResponseBodyAdvice chain for body=RestMassage [code=200, json=Blog [id=152197659685919, title=dddddddddddddddddddddddddddd, content=null, content2=null, creatdate=null, updatadate=null, readcount=0, remark=12d121123123213312..., author=null]]
+1786529 DEBUG [2018-04-02 12:39:01]  After ResponseBodyAdvice chain body=RestMassage [code=200, json=Blog [id=152197659685919, title=dddddddddddddddddddddddddddd, content=null, content2=null, creatdate=null, updatadate=null, readcount=0, remark=12d121123123213312..., author=null]]
+1786529 DEBUG [2018-04-02 12:39:01]  Written [RestMassage [code=200, json=Blog [id=152197659685919, title=dddddddddddddddddddddddddddd, content=null, content2=null, creatdate=null, updatadate=null, readcount=0, remark=12d121123123213312..., author=null]]] as "application/json;charset=utf-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@8216164]
+1786529 DEBUG [2018-04-02 12:39:01]  Null ModelAndView returned to DispatcherServlet with name 'DispatcherServlet': assuming HandlerAdapter completed request handling
+1786529 DEBUG [2018-04-02 12:39:01]  Successfully completed request
+1786529 DEBUG [2018-04-02 12:39:01]  <==      Total: 5
+1786529 DEBUG [2018-04-02 12:39:01]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@590b3f35]
+1786545 DEBUG [2018-04-02 12:39:01]  Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@590b3f35]
+1786545 DEBUG [2018-04-02 12:39:01]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@590b3f35]
+1786545 DEBUG [2018-04-02 12:39:01]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@590b3f35]
+1786545 DEBUG [2018-04-02 12:39:01]  Initiating transaction commit
+1786545 DEBUG [2018-04-02 12:39:01]  Committing JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@256c7878]
+1786545 DEBUG [2018-04-02 12:39:01]  DispatcherServlet with name 'DispatcherServlet' processing GET request for [/api/grow/1]
+1786545 DEBUG [2018-04-02 12:39:01]  Looking up handler method for path /api/grow/1
+1786545 DEBUG [2018-04-02 12:39:01]  Returning handler method [public com.moxiaowei.blog.util.RestMessage<java.util.List<com.moxiaowei.blog.pojo.Grow>> com.moxiaowei.blog.controller.GrowController.getGrow(int)]
+1786545 DEBUG [2018-04-02 12:39:01]  Returning cached instance of singleton bean 'growController'
+1786545 DEBUG [2018-04-02 12:39:01]  Last-Modified value for [/api/grow/1] is: -1
+1786545 DEBUG [2018-04-02 12:39:01]  Creating new transaction with name [com.moxiaowei.blog.service.impl.GrowServiceImpl.getGrow]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+1786545 DEBUG [2018-04-02 12:39:01]  Acquired Connection [com.mysql.jdbc.JDBC4Connection@5d00e773] for JDBC transaction
+1786545 DEBUG [2018-04-02 12:39:01]  Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@5d00e773] read-only
+1786545 DEBUG [2018-04-02 12:39:01]  Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@5d00e773] to manual commit
+1786545 DEBUG [2018-04-02 12:39:01]  Creating a new SqlSession
+1786545 DEBUG [2018-04-02 12:39:01]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5cc61f7d]
+1786545 DEBUG [2018-04-02 12:39:01]  JDBC Connection [com.mysql.jdbc.JDBC4Connection@5d00e773] will be managed by Spring
+1786545 DEBUG [2018-04-02 12:39:01]  ==>  Preparing: SELECT count(*) FROM grow 
+1786545 DEBUG [2018-04-02 12:39:01]  Resetting read-only flag of JDBC Connection [com.mysql.jdbc.JDBC4Connection@256c7878]
+1786545 DEBUG [2018-04-02 12:39:01]  Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@256c7878] after transaction
+1786545 DEBUG [2018-04-02 12:39:01]  Returning JDBC Connection to DataSource
+1786545 DEBUG [2018-04-02 12:39:01]  Creating new transaction with name [com.moxiaowei.blog.service.impl.BlogServiceImpl.getBlogNew]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+1786545 DEBUG [2018-04-02 12:39:01]  Acquired Connection [com.mysql.jdbc.JDBC4Connection@256c7878] for JDBC transaction
+1786545 DEBUG [2018-04-02 12:39:01]  Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@256c7878] read-only
+1786545 DEBUG [2018-04-02 12:39:01]  Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@256c7878] to manual commit
+1786545 DEBUG [2018-04-02 12:39:01]  ==> Parameters: 
+1786560 DEBUG [2018-04-02 12:39:01]  Creating a new SqlSession
+1786560 DEBUG [2018-04-02 12:39:01]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@698d651b]
+1786560 DEBUG [2018-04-02 12:39:01]  JDBC Connection [com.mysql.jdbc.JDBC4Connection@256c7878] will be managed by Spring
+1786560 DEBUG [2018-04-02 12:39:01]  ==>  Preparing: SELECT count(*) FROM blog 
+1786560 DEBUG [2018-04-02 12:39:01]  ==> Parameters: 
+1786560 DEBUG [2018-04-02 12:39:01]  <==      Total: 1
+1786560 DEBUG [2018-04-02 12:39:01]  ==>  Preparing: select id, title, remark from blog order by creatdate desc limit ?,? 
+1786560 DEBUG [2018-04-02 12:39:01]  ==> Parameters: 0(Integer), 1(Integer)
+1786560 DEBUG [2018-04-02 12:39:01]  <==      Total: 1
+1786560 DEBUG [2018-04-02 12:39:01]  ==>  Preparing: select id, content from grow order by creatdate desc limit ?,? 
+1786560 DEBUG [2018-04-02 12:39:01]  ==> Parameters: 0(Integer), 5(Integer)
+1786560 DEBUG [2018-04-02 12:39:01]  <==      Total: 1
+1786560 DEBUG [2018-04-02 12:39:01]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@698d651b]
+1786560 DEBUG [2018-04-02 12:39:01]  Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@698d651b]
+1786560 DEBUG [2018-04-02 12:39:01]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@698d651b]
+1786560 DEBUG [2018-04-02 12:39:01]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@698d651b]
+1786560 DEBUG [2018-04-02 12:39:01]  Initiating transaction commit
+1786560 DEBUG [2018-04-02 12:39:01]  Committing JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@256c7878]
+1786560 DEBUG [2018-04-02 12:39:01]  <==      Total: 5
+1786560 DEBUG [2018-04-02 12:39:01]  Resetting read-only flag of JDBC Connection [com.mysql.jdbc.JDBC4Connection@256c7878]
+1786560 DEBUG [2018-04-02 12:39:01]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5cc61f7d]
+1786560 DEBUG [2018-04-02 12:39:01]  Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@256c7878] after transaction
+1786560 DEBUG [2018-04-02 12:39:01]  Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5cc61f7d]
+1786560 DEBUG [2018-04-02 12:39:01]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5cc61f7d]
+1786560 DEBUG [2018-04-02 12:39:01]  Returning JDBC Connection to DataSource
+1786560 DEBUG [2018-04-02 12:39:01]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5cc61f7d]
+1786560 DEBUG [2018-04-02 12:39:01]  Initiating transaction commit
+1786560 DEBUG [2018-04-02 12:39:01]  Committing JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@5d00e773]
+1786560 DEBUG [2018-04-02 12:39:01]  DispatcherServlet with name 'DispatcherServlet' processing GET request for [/api/day]
+1786560 DEBUG [2018-04-02 12:39:01]  Looking up handler method for path /api/day
+1786560 DEBUG [2018-04-02 12:39:01]  Invoking ResponseBodyAdvice chain for body=RestMassage [code=200, json=Page{count=true, pageNum=1, pageSize=5, startRow=0, endRow=5, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1786560 DEBUG [2018-04-02 12:39:01]  After ResponseBodyAdvice chain body=RestMassage [code=200, json=Page{count=true, pageNum=1, pageSize=5, startRow=0, endRow=5, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1786560 DEBUG [2018-04-02 12:39:01]  Returning handler method [public com.moxiaowei.blog.util.RestMessage<java.lang.Double> com.moxiaowei.blog.controller.PageController.getday()]
+1786560 DEBUG [2018-04-02 12:39:01]  Returning cached instance of singleton bean 'pageController'
+1786560 DEBUG [2018-04-02 12:39:01]  Last-Modified value for [/api/day] is: -1
+1786560 DEBUG [2018-04-02 12:39:01]  Written [RestMassage [code=200, json=Page{count=true, pageNum=1, pageSize=5, startRow=0, endRow=5, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]] as "application/json;charset=utf-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@8216164]
+1786560 DEBUG [2018-04-02 12:39:01]  Null ModelAndView returned to DispatcherServlet with name 'DispatcherServlet': assuming HandlerAdapter completed request handling
+1786560 DEBUG [2018-04-02 12:39:01]  Successfully completed request
+1786560 DEBUG [2018-04-02 12:39:01]  Invoking ResponseBodyAdvice chain for body=RestMassage [code=200, json=92.5270949074074]
+1786560 DEBUG [2018-04-02 12:39:01]  Resetting read-only flag of JDBC Connection [com.mysql.jdbc.JDBC4Connection@5d00e773]
+1786576 DEBUG [2018-04-02 12:39:01]  After ResponseBodyAdvice chain body=RestMassage [code=200, json=92.5270949074074]
+1786576 DEBUG [2018-04-02 12:39:01]  Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@5d00e773] after transaction
+1786576 DEBUG [2018-04-02 12:39:01]  Returning JDBC Connection to DataSource
+1786576 DEBUG [2018-04-02 12:39:01]  Written [RestMassage [code=200, json=92.5270949074074]] as "application/json;charset=utf-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@8216164]
+1786576 DEBUG [2018-04-02 12:39:01]  Null ModelAndView returned to DispatcherServlet with name 'DispatcherServlet': assuming HandlerAdapter completed request handling
+1786576 DEBUG [2018-04-02 12:39:01]  Successfully completed request
+1786576 DEBUG [2018-04-02 12:39:01]  Invoking ResponseBodyAdvice chain for body=RestMassage [code=200, json=Page{count=true, pageNum=1, pageSize=5, startRow=0, endRow=5, total=7, pages=2, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1786576 DEBUG [2018-04-02 12:39:01]  After ResponseBodyAdvice chain body=RestMassage [code=200, json=Page{count=true, pageNum=1, pageSize=5, startRow=0, endRow=5, total=7, pages=2, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1786576 DEBUG [2018-04-02 12:39:01]  Written [RestMassage [code=200, json=Page{count=true, pageNum=1, pageSize=5, startRow=0, endRow=5, total=7, pages=2, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]] as "application/json;charset=utf-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@8216164]
+1786576 DEBUG [2018-04-02 12:39:01]  Null ModelAndView returned to DispatcherServlet with name 'DispatcherServlet': assuming HandlerAdapter completed request handling
+1786576 DEBUG [2018-04-02 12:39:01]  Successfully completed request
+1786888 DEBUG [2018-04-02 12:39:01]  Initiating transaction commit
+1786888 DEBUG [2018-04-02 12:39:01]  Committing JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1786888 DEBUG [2018-04-02 12:39:01]  Resetting read-only flag of JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1786888 DEBUG [2018-04-02 12:39:01]  Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] after transaction
+1786888 DEBUG [2018-04-02 12:39:01]  Returning JDBC Connection to DataSource
+1786888 DEBUG [2018-04-02 12:39:01]  Invoking ResponseBodyAdvice chain for body=RestMassage [code=400, json=null]
+1786888 DEBUG [2018-04-02 12:39:01]  After ResponseBodyAdvice chain body=RestMassage [code=400, json=null]
+1786888 DEBUG [2018-04-02 12:39:01]  Written [RestMassage [code=400, json=null]] as "application/json;charset=utf-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@8216164]
+1786888 DEBUG [2018-04-02 12:39:01]  Null ModelAndView returned to DispatcherServlet with name 'DispatcherServlet': assuming HandlerAdapter completed request handling
+1786888 DEBUG [2018-04-02 12:39:01]  Successfully completed request
+1789805 DEBUG [2018-04-02 12:39:04]  DispatcherServlet with name 'DispatcherServlet' processing GET request for [/api/blogList/2]
+1789805 DEBUG [2018-04-02 12:39:04]  Looking up handler method for path /api/blogList/2
+1789805 DEBUG [2018-04-02 12:39:04]  Returning handler method [public com.moxiaowei.blog.util.RestMessage<java.util.List<com.moxiaowei.blog.pojo.Blog>> com.moxiaowei.blog.controller.BlogController.getBlogListAsyn(int)]
+1789805 DEBUG [2018-04-02 12:39:04]  Returning cached instance of singleton bean 'blogController'
+1789805 DEBUG [2018-04-02 12:39:04]  Last-Modified value for [/api/blogList/2] is: -1
+1789805 DEBUG [2018-04-02 12:39:04]  Creating new transaction with name [com.moxiaowei.blog.service.impl.BlogServiceImpl.getBlog]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+1789805 DEBUG [2018-04-02 12:39:04]  Acquired Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] for JDBC transaction
+1789805 DEBUG [2018-04-02 12:39:04]  Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] read-only
+1789805 DEBUG [2018-04-02 12:39:04]  Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] to manual commit
+1789805 DEBUG [2018-04-02 12:39:04]  Creating a new SqlSession
+1789805 DEBUG [2018-04-02 12:39:04]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@558c40d3]
+1789805 DEBUG [2018-04-02 12:39:04]  JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] will be managed by Spring
+1789805 DEBUG [2018-04-02 12:39:04]  ==>  Preparing: SELECT count(*) FROM blog 
+1789805 DEBUG [2018-04-02 12:39:04]  ==> Parameters: 
+1789821 DEBUG [2018-04-02 12:39:04]  <==      Total: 1
+1789821 DEBUG [2018-04-02 12:39:04]  ==>  Preparing: select id, title, remark, creatdate, updatadate, author from blog order by readcount desc limit ?,? 
+1789821 DEBUG [2018-04-02 12:39:04]  ==> Parameters: 5(Integer), 5(Integer)
+1789821 DEBUG [2018-04-02 12:39:04]  <==      Total: 5
+1789821 DEBUG [2018-04-02 12:39:04]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@558c40d3]
+1789821 DEBUG [2018-04-02 12:39:04]  Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@558c40d3]
+1789821 DEBUG [2018-04-02 12:39:04]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@558c40d3]
+1789821 DEBUG [2018-04-02 12:39:04]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@558c40d3]
+1789821 DEBUG [2018-04-02 12:39:04]  Initiating transaction commit
+1789821 DEBUG [2018-04-02 12:39:04]  Committing JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1789821 DEBUG [2018-04-02 12:39:04]  Resetting read-only flag of JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1789821 DEBUG [2018-04-02 12:39:04]  Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] after transaction
+1789821 DEBUG [2018-04-02 12:39:04]  Returning JDBC Connection to DataSource
+1789821 DEBUG [2018-04-02 12:39:04]  Creating new transaction with name [com.moxiaowei.blog.service.impl.BlogServiceImpl.getBlogNew]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+1789821 DEBUG [2018-04-02 12:39:04]  Acquired Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] for JDBC transaction
+1789821 DEBUG [2018-04-02 12:39:04]  Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] read-only
+1789821 DEBUG [2018-04-02 12:39:04]  Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] to manual commit
+1789821 DEBUG [2018-04-02 12:39:04]  Creating a new SqlSession
+1789821 DEBUG [2018-04-02 12:39:04]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@707395d1]
+1789821 DEBUG [2018-04-02 12:39:04]  JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] will be managed by Spring
+1789821 DEBUG [2018-04-02 12:39:04]  ==>  Preparing: SELECT count(*) FROM blog 
+1789821 DEBUG [2018-04-02 12:39:04]  ==> Parameters: 
+1789821 DEBUG [2018-04-02 12:39:04]  <==      Total: 1
+1789821 DEBUG [2018-04-02 12:39:04]  ==>  Preparing: select id, title, remark from blog order by creatdate desc limit ?,? 
+1789821 DEBUG [2018-04-02 12:39:04]  ==> Parameters: 0(Integer), 1(Integer)
+1789821 DEBUG [2018-04-02 12:39:04]  <==      Total: 1
+1789821 DEBUG [2018-04-02 12:39:04]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@707395d1]
+1789821 DEBUG [2018-04-02 12:39:04]  Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@707395d1]
+1789836 DEBUG [2018-04-02 12:39:04]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@707395d1]
+1789836 DEBUG [2018-04-02 12:39:04]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@707395d1]
+1789836 DEBUG [2018-04-02 12:39:04]  Initiating transaction commit
+1789836 DEBUG [2018-04-02 12:39:04]  Committing JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1789836 DEBUG [2018-04-02 12:39:04]  Resetting read-only flag of JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1789836 DEBUG [2018-04-02 12:39:04]  Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] after transaction
+1789836 DEBUG [2018-04-02 12:39:04]  Returning JDBC Connection to DataSource
+1789836 DEBUG [2018-04-02 12:39:04]  Invoking ResponseBodyAdvice chain for body=RestMassage [code=200, json=Page{count=true, pageNum=2, pageSize=5, startRow=5, endRow=10, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1789836 DEBUG [2018-04-02 12:39:04]  After ResponseBodyAdvice chain body=RestMassage [code=200, json=Page{count=true, pageNum=2, pageSize=5, startRow=5, endRow=10, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1789836 DEBUG [2018-04-02 12:39:04]  Written [RestMassage [code=200, json=Page{count=true, pageNum=2, pageSize=5, startRow=5, endRow=10, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]] as "application/json;charset=utf-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@8216164]
+1789836 DEBUG [2018-04-02 12:39:04]  Null ModelAndView returned to DispatcherServlet with name 'DispatcherServlet': assuming HandlerAdapter completed request handling
+1789836 DEBUG [2018-04-02 12:39:04]  Successfully completed request
+1790975 DEBUG [2018-04-02 12:39:06]  DispatcherServlet with name 'DispatcherServlet' processing GET request for [/api/blogList/3]
+1790975 DEBUG [2018-04-02 12:39:06]  Looking up handler method for path /api/blogList/3
+1790975 DEBUG [2018-04-02 12:39:06]  Returning handler method [public com.moxiaowei.blog.util.RestMessage<java.util.List<com.moxiaowei.blog.pojo.Blog>> com.moxiaowei.blog.controller.BlogController.getBlogListAsyn(int)]
+1790975 DEBUG [2018-04-02 12:39:06]  Returning cached instance of singleton bean 'blogController'
+1790975 DEBUG [2018-04-02 12:39:06]  Last-Modified value for [/api/blogList/3] is: -1
+1790975 DEBUG [2018-04-02 12:39:06]  Creating new transaction with name [com.moxiaowei.blog.service.impl.BlogServiceImpl.getBlog]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+1790975 DEBUG [2018-04-02 12:39:06]  Acquired Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] for JDBC transaction
+1790975 DEBUG [2018-04-02 12:39:06]  Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] read-only
+1790975 DEBUG [2018-04-02 12:39:06]  Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] to manual commit
+1790975 DEBUG [2018-04-02 12:39:06]  Creating a new SqlSession
+1790975 DEBUG [2018-04-02 12:39:06]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f6653ad]
+1790975 DEBUG [2018-04-02 12:39:06]  JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] will be managed by Spring
+1790975 DEBUG [2018-04-02 12:39:06]  ==>  Preparing: SELECT count(*) FROM blog 
+1790975 DEBUG [2018-04-02 12:39:06]  ==> Parameters: 
+1790975 DEBUG [2018-04-02 12:39:06]  <==      Total: 1
+1790975 DEBUG [2018-04-02 12:39:06]  ==>  Preparing: select id, title, remark, creatdate, updatadate, author from blog order by readcount desc limit ?,? 
+1790975 DEBUG [2018-04-02 12:39:06]  ==> Parameters: 10(Integer), 5(Integer)
+1790991 DEBUG [2018-04-02 12:39:06]  <==      Total: 5
+1790991 DEBUG [2018-04-02 12:39:06]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f6653ad]
+1790991 DEBUG [2018-04-02 12:39:06]  Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f6653ad]
+1790991 DEBUG [2018-04-02 12:39:06]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f6653ad]
+1790991 DEBUG [2018-04-02 12:39:06]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f6653ad]
+1790991 DEBUG [2018-04-02 12:39:06]  Initiating transaction commit
+1790991 DEBUG [2018-04-02 12:39:06]  Committing JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1790991 DEBUG [2018-04-02 12:39:06]  Resetting read-only flag of JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1790991 DEBUG [2018-04-02 12:39:06]  Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] after transaction
+1790991 DEBUG [2018-04-02 12:39:06]  Returning JDBC Connection to DataSource
+1790991 DEBUG [2018-04-02 12:39:06]  Creating new transaction with name [com.moxiaowei.blog.service.impl.BlogServiceImpl.getBlogNew]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+1790991 DEBUG [2018-04-02 12:39:06]  Acquired Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] for JDBC transaction
+1790991 DEBUG [2018-04-02 12:39:06]  Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] read-only
+1790991 DEBUG [2018-04-02 12:39:06]  Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] to manual commit
+1790991 DEBUG [2018-04-02 12:39:06]  Creating a new SqlSession
+1790991 DEBUG [2018-04-02 12:39:06]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b22789f]
+1790991 DEBUG [2018-04-02 12:39:06]  JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] will be managed by Spring
+1790991 DEBUG [2018-04-02 12:39:06]  ==>  Preparing: SELECT count(*) FROM blog 
+1790991 DEBUG [2018-04-02 12:39:06]  ==> Parameters: 
+1790991 DEBUG [2018-04-02 12:39:06]  <==      Total: 1
+1790991 DEBUG [2018-04-02 12:39:06]  ==>  Preparing: select id, title, remark from blog order by creatdate desc limit ?,? 
+1790991 DEBUG [2018-04-02 12:39:06]  ==> Parameters: 0(Integer), 1(Integer)
+1790991 DEBUG [2018-04-02 12:39:06]  <==      Total: 1
+1790991 DEBUG [2018-04-02 12:39:06]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b22789f]
+1790991 DEBUG [2018-04-02 12:39:06]  Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b22789f]
+1790991 DEBUG [2018-04-02 12:39:06]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b22789f]
+1790991 DEBUG [2018-04-02 12:39:06]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b22789f]
+1790991 DEBUG [2018-04-02 12:39:06]  Initiating transaction commit
+1790991 DEBUG [2018-04-02 12:39:06]  Committing JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1790991 DEBUG [2018-04-02 12:39:06]  Resetting read-only flag of JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1790991 DEBUG [2018-04-02 12:39:06]  Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] after transaction
+1790991 DEBUG [2018-04-02 12:39:06]  Returning JDBC Connection to DataSource
+1790991 DEBUG [2018-04-02 12:39:06]  Invoking ResponseBodyAdvice chain for body=RestMassage [code=200, json=Page{count=true, pageNum=3, pageSize=5, startRow=10, endRow=15, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1791006 DEBUG [2018-04-02 12:39:06]  After ResponseBodyAdvice chain body=RestMassage [code=200, json=Page{count=true, pageNum=3, pageSize=5, startRow=10, endRow=15, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1791006 DEBUG [2018-04-02 12:39:06]  Written [RestMassage [code=200, json=Page{count=true, pageNum=3, pageSize=5, startRow=10, endRow=15, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]] as "application/json;charset=utf-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@8216164]
+1791006 DEBUG [2018-04-02 12:39:06]  Null ModelAndView returned to DispatcherServlet with name 'DispatcherServlet': assuming HandlerAdapter completed request handling
+1791006 DEBUG [2018-04-02 12:39:06]  Successfully completed request
+1797090 DEBUG [2018-04-02 12:39:12]  DispatcherServlet with name 'DispatcherServlet' processing GET request for [/api/blogList/4]
+1797090 DEBUG [2018-04-02 12:39:12]  Looking up handler method for path /api/blogList/4
+1797090 DEBUG [2018-04-02 12:39:12]  Returning handler method [public com.moxiaowei.blog.util.RestMessage<java.util.List<com.moxiaowei.blog.pojo.Blog>> com.moxiaowei.blog.controller.BlogController.getBlogListAsyn(int)]
+1797090 DEBUG [2018-04-02 12:39:12]  Returning cached instance of singleton bean 'blogController'
+1797090 DEBUG [2018-04-02 12:39:12]  Last-Modified value for [/api/blogList/4] is: -1
+1797090 DEBUG [2018-04-02 12:39:12]  Creating new transaction with name [com.moxiaowei.blog.service.impl.BlogServiceImpl.getBlog]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+1797090 DEBUG [2018-04-02 12:39:12]  Acquired Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] for JDBC transaction
+1797090 DEBUG [2018-04-02 12:39:12]  Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] read-only
+1797090 DEBUG [2018-04-02 12:39:12]  Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] to manual commit
+1797090 DEBUG [2018-04-02 12:39:12]  Creating a new SqlSession
+1797090 DEBUG [2018-04-02 12:39:12]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b50a099]
+1797090 DEBUG [2018-04-02 12:39:12]  JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] will be managed by Spring
+1797090 DEBUG [2018-04-02 12:39:12]  ==>  Preparing: SELECT count(*) FROM blog 
+1797090 DEBUG [2018-04-02 12:39:12]  ==> Parameters: 
+1797090 DEBUG [2018-04-02 12:39:12]  <==      Total: 1
+1797090 DEBUG [2018-04-02 12:39:12]  ==>  Preparing: select id, title, remark, creatdate, updatadate, author from blog order by readcount desc limit ?,? 
+1797106 DEBUG [2018-04-02 12:39:12]  ==> Parameters: 15(Integer), 5(Integer)
+1797106 DEBUG [2018-04-02 12:39:12]  <==      Total: 5
+1797106 DEBUG [2018-04-02 12:39:12]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b50a099]
+1797106 DEBUG [2018-04-02 12:39:12]  Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b50a099]
+1797106 DEBUG [2018-04-02 12:39:12]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b50a099]
+1797106 DEBUG [2018-04-02 12:39:12]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b50a099]
+1797106 DEBUG [2018-04-02 12:39:12]  Initiating transaction commit
+1797106 DEBUG [2018-04-02 12:39:12]  Committing JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1797106 DEBUG [2018-04-02 12:39:12]  Resetting read-only flag of JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1797106 DEBUG [2018-04-02 12:39:12]  Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] after transaction
+1797106 DEBUG [2018-04-02 12:39:12]  Returning JDBC Connection to DataSource
+1797106 DEBUG [2018-04-02 12:39:12]  Creating new transaction with name [com.moxiaowei.blog.service.impl.BlogServiceImpl.getBlogNew]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+1797106 DEBUG [2018-04-02 12:39:12]  Acquired Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] for JDBC transaction
+1797106 DEBUG [2018-04-02 12:39:12]  Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] read-only
+1797106 DEBUG [2018-04-02 12:39:12]  Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] to manual commit
+1797106 DEBUG [2018-04-02 12:39:12]  Creating a new SqlSession
+1797106 DEBUG [2018-04-02 12:39:12]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@fd36d2c]
+1797106 DEBUG [2018-04-02 12:39:12]  JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] will be managed by Spring
+1797106 DEBUG [2018-04-02 12:39:12]  ==>  Preparing: SELECT count(*) FROM blog 
+1797106 DEBUG [2018-04-02 12:39:12]  ==> Parameters: 
+1797106 DEBUG [2018-04-02 12:39:12]  <==      Total: 1
+1797106 DEBUG [2018-04-02 12:39:12]  ==>  Preparing: select id, title, remark from blog order by creatdate desc limit ?,? 
+1797106 DEBUG [2018-04-02 12:39:12]  ==> Parameters: 0(Integer), 1(Integer)
+1797106 DEBUG [2018-04-02 12:39:12]  <==      Total: 1
+1797106 DEBUG [2018-04-02 12:39:12]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@fd36d2c]
+1797106 DEBUG [2018-04-02 12:39:12]  Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@fd36d2c]
+1797106 DEBUG [2018-04-02 12:39:12]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@fd36d2c]
+1797106 DEBUG [2018-04-02 12:39:12]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@fd36d2c]
+1797106 DEBUG [2018-04-02 12:39:12]  Initiating transaction commit
+1797106 DEBUG [2018-04-02 12:39:12]  Committing JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1797121 DEBUG [2018-04-02 12:39:12]  Resetting read-only flag of JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1797121 DEBUG [2018-04-02 12:39:12]  Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] after transaction
+1797121 DEBUG [2018-04-02 12:39:12]  Returning JDBC Connection to DataSource
+1797121 DEBUG [2018-04-02 12:39:12]  Invoking ResponseBodyAdvice chain for body=RestMassage [code=200, json=Page{count=true, pageNum=4, pageSize=5, startRow=15, endRow=20, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1797121 DEBUG [2018-04-02 12:39:12]  After ResponseBodyAdvice chain body=RestMassage [code=200, json=Page{count=true, pageNum=4, pageSize=5, startRow=15, endRow=20, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1797121 DEBUG [2018-04-02 12:39:12]  Written [RestMassage [code=200, json=Page{count=true, pageNum=4, pageSize=5, startRow=15, endRow=20, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]] as "application/json;charset=utf-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@8216164]
+1797121 DEBUG [2018-04-02 12:39:12]  Null ModelAndView returned to DispatcherServlet with name 'DispatcherServlet': assuming HandlerAdapter completed request handling
+1797121 DEBUG [2018-04-02 12:39:12]  Successfully completed request
+1797808 DEBUG [2018-04-02 12:39:12]  DispatcherServlet with name 'DispatcherServlet' processing GET request for [/api/blogList/5]
+1797808 DEBUG [2018-04-02 12:39:12]  Looking up handler method for path /api/blogList/5
+1797808 DEBUG [2018-04-02 12:39:12]  Returning handler method [public com.moxiaowei.blog.util.RestMessage<java.util.List<com.moxiaowei.blog.pojo.Blog>> com.moxiaowei.blog.controller.BlogController.getBlogListAsyn(int)]
+1797808 DEBUG [2018-04-02 12:39:12]  Returning cached instance of singleton bean 'blogController'
+1797808 DEBUG [2018-04-02 12:39:12]  Last-Modified value for [/api/blogList/5] is: -1
+1797808 DEBUG [2018-04-02 12:39:12]  Creating new transaction with name [com.moxiaowei.blog.service.impl.BlogServiceImpl.getBlog]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+1797808 DEBUG [2018-04-02 12:39:12]  Acquired Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] for JDBC transaction
+1797808 DEBUG [2018-04-02 12:39:12]  Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] read-only
+1797808 DEBUG [2018-04-02 12:39:12]  Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] to manual commit
+1797808 DEBUG [2018-04-02 12:39:12]  Creating a new SqlSession
+1797808 DEBUG [2018-04-02 12:39:12]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4aa3db37]
+1797808 DEBUG [2018-04-02 12:39:12]  JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] will be managed by Spring
+1797808 DEBUG [2018-04-02 12:39:12]  ==>  Preparing: SELECT count(*) FROM blog 
+1797808 DEBUG [2018-04-02 12:39:12]  ==> Parameters: 
+1797808 DEBUG [2018-04-02 12:39:12]  <==      Total: 1
+1797823 DEBUG [2018-04-02 12:39:12]  ==>  Preparing: select id, title, remark, creatdate, updatadate, author from blog order by readcount desc limit ?,? 
+1797823 DEBUG [2018-04-02 12:39:12]  ==> Parameters: 20(Integer), 5(Integer)
+1797823 DEBUG [2018-04-02 12:39:12]  <==      Total: 5
+1797823 DEBUG [2018-04-02 12:39:12]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4aa3db37]
+1797823 DEBUG [2018-04-02 12:39:12]  Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4aa3db37]
+1797823 DEBUG [2018-04-02 12:39:12]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4aa3db37]
+1797823 DEBUG [2018-04-02 12:39:12]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4aa3db37]
+1797823 DEBUG [2018-04-02 12:39:12]  Initiating transaction commit
+1797823 DEBUG [2018-04-02 12:39:12]  Committing JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1797823 DEBUG [2018-04-02 12:39:12]  Resetting read-only flag of JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1797823 DEBUG [2018-04-02 12:39:12]  Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] after transaction
+1797823 DEBUG [2018-04-02 12:39:12]  Returning JDBC Connection to DataSource
+1797823 DEBUG [2018-04-02 12:39:12]  Creating new transaction with name [com.moxiaowei.blog.service.impl.BlogServiceImpl.getBlogNew]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+1797823 DEBUG [2018-04-02 12:39:12]  Acquired Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] for JDBC transaction
+1797823 DEBUG [2018-04-02 12:39:12]  Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] read-only
+1797823 DEBUG [2018-04-02 12:39:12]  Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] to manual commit
+1797823 DEBUG [2018-04-02 12:39:12]  Creating a new SqlSession
+1797823 DEBUG [2018-04-02 12:39:12]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1051f02e]
+1797823 DEBUG [2018-04-02 12:39:12]  JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] will be managed by Spring
+1797823 DEBUG [2018-04-02 12:39:12]  ==>  Preparing: SELECT count(*) FROM blog 
+1797823 DEBUG [2018-04-02 12:39:12]  ==> Parameters: 
+1797823 DEBUG [2018-04-02 12:39:12]  <==      Total: 1
+1797823 DEBUG [2018-04-02 12:39:12]  ==>  Preparing: select id, title, remark from blog order by creatdate desc limit ?,? 
+1797823 DEBUG [2018-04-02 12:39:12]  ==> Parameters: 0(Integer), 1(Integer)
+1797823 DEBUG [2018-04-02 12:39:12]  <==      Total: 1
+1797823 DEBUG [2018-04-02 12:39:12]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1051f02e]
+1797823 DEBUG [2018-04-02 12:39:12]  Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1051f02e]
+1797823 DEBUG [2018-04-02 12:39:12]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1051f02e]
+1797823 DEBUG [2018-04-02 12:39:12]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1051f02e]
+1797823 DEBUG [2018-04-02 12:39:12]  Initiating transaction commit
+1797823 DEBUG [2018-04-02 12:39:12]  Committing JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1797823 DEBUG [2018-04-02 12:39:12]  Resetting read-only flag of JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1797839 DEBUG [2018-04-02 12:39:12]  Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] after transaction
+1797839 DEBUG [2018-04-02 12:39:12]  Returning JDBC Connection to DataSource
+1797839 DEBUG [2018-04-02 12:39:12]  Invoking ResponseBodyAdvice chain for body=RestMassage [code=200, json=Page{count=true, pageNum=5, pageSize=5, startRow=20, endRow=25, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1797839 DEBUG [2018-04-02 12:39:12]  After ResponseBodyAdvice chain body=RestMassage [code=200, json=Page{count=true, pageNum=5, pageSize=5, startRow=20, endRow=25, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1797839 DEBUG [2018-04-02 12:39:12]  Written [RestMassage [code=200, json=Page{count=true, pageNum=5, pageSize=5, startRow=20, endRow=25, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]] as "application/json;charset=utf-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@8216164]
+1797839 DEBUG [2018-04-02 12:39:12]  Null ModelAndView returned to DispatcherServlet with name 'DispatcherServlet': assuming HandlerAdapter completed request handling
+1797839 DEBUG [2018-04-02 12:39:12]  Successfully completed request
+1798229 DEBUG [2018-04-02 12:39:13]  DispatcherServlet with name 'DispatcherServlet' processing GET request for [/api/blogList/6]
+1798229 DEBUG [2018-04-02 12:39:13]  Looking up handler method for path /api/blogList/6
+1798229 DEBUG [2018-04-02 12:39:13]  Returning handler method [public com.moxiaowei.blog.util.RestMessage<java.util.List<com.moxiaowei.blog.pojo.Blog>> com.moxiaowei.blog.controller.BlogController.getBlogListAsyn(int)]
+1798229 DEBUG [2018-04-02 12:39:13]  Returning cached instance of singleton bean 'blogController'
+1798229 DEBUG [2018-04-02 12:39:13]  Last-Modified value for [/api/blogList/6] is: -1
+1798229 DEBUG [2018-04-02 12:39:13]  Creating new transaction with name [com.moxiaowei.blog.service.impl.BlogServiceImpl.getBlog]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+1798229 DEBUG [2018-04-02 12:39:13]  Acquired Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] for JDBC transaction
+1798229 DEBUG [2018-04-02 12:39:13]  Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] read-only
+1798229 DEBUG [2018-04-02 12:39:13]  Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] to manual commit
+1798229 DEBUG [2018-04-02 12:39:13]  Creating a new SqlSession
+1798229 DEBUG [2018-04-02 12:39:13]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@33319c36]
+1798229 DEBUG [2018-04-02 12:39:13]  JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] will be managed by Spring
+1798229 DEBUG [2018-04-02 12:39:13]  ==>  Preparing: SELECT count(*) FROM blog 
+1798229 DEBUG [2018-04-02 12:39:13]  ==> Parameters: 
+1798229 DEBUG [2018-04-02 12:39:13]  <==      Total: 1
+1798229 DEBUG [2018-04-02 12:39:13]  ==>  Preparing: select id, title, remark, creatdate, updatadate, author from blog order by readcount desc limit ?,? 
+1798229 DEBUG [2018-04-02 12:39:13]  ==> Parameters: 25(Integer), 5(Integer)
+1798229 DEBUG [2018-04-02 12:39:13]  <==      Total: 5
+1798229 DEBUG [2018-04-02 12:39:13]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@33319c36]
+1798229 DEBUG [2018-04-02 12:39:13]  Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@33319c36]
+1798229 DEBUG [2018-04-02 12:39:13]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@33319c36]
+1798229 DEBUG [2018-04-02 12:39:13]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@33319c36]
+1798229 DEBUG [2018-04-02 12:39:13]  Initiating transaction commit
+1798229 DEBUG [2018-04-02 12:39:13]  Committing JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1798245 DEBUG [2018-04-02 12:39:13]  Resetting read-only flag of JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1798245 DEBUG [2018-04-02 12:39:13]  Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] after transaction
+1798245 DEBUG [2018-04-02 12:39:13]  Returning JDBC Connection to DataSource
+1798245 DEBUG [2018-04-02 12:39:13]  Creating new transaction with name [com.moxiaowei.blog.service.impl.BlogServiceImpl.getBlogNew]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+1798245 DEBUG [2018-04-02 12:39:13]  Acquired Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] for JDBC transaction
+1798245 DEBUG [2018-04-02 12:39:13]  Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] read-only
+1798245 DEBUG [2018-04-02 12:39:13]  Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] to manual commit
+1798245 DEBUG [2018-04-02 12:39:13]  Creating a new SqlSession
+1798245 DEBUG [2018-04-02 12:39:13]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a419e2f]
+1798245 DEBUG [2018-04-02 12:39:13]  JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] will be managed by Spring
+1798245 DEBUG [2018-04-02 12:39:13]  ==>  Preparing: SELECT count(*) FROM blog 
+1798245 DEBUG [2018-04-02 12:39:13]  ==> Parameters: 
+1798245 DEBUG [2018-04-02 12:39:13]  <==      Total: 1
+1798245 DEBUG [2018-04-02 12:39:13]  ==>  Preparing: select id, title, remark from blog order by creatdate desc limit ?,? 
+1798245 DEBUG [2018-04-02 12:39:13]  ==> Parameters: 0(Integer), 1(Integer)
+1798245 DEBUG [2018-04-02 12:39:13]  <==      Total: 1
+1798245 DEBUG [2018-04-02 12:39:13]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a419e2f]
+1798245 DEBUG [2018-04-02 12:39:13]  Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a419e2f]
+1798245 DEBUG [2018-04-02 12:39:13]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a419e2f]
+1798245 DEBUG [2018-04-02 12:39:13]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a419e2f]
+1798245 DEBUG [2018-04-02 12:39:13]  Initiating transaction commit
+1798245 DEBUG [2018-04-02 12:39:13]  Committing JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1798245 DEBUG [2018-04-02 12:39:13]  Resetting read-only flag of JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1798245 DEBUG [2018-04-02 12:39:13]  Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] after transaction
+1798245 DEBUG [2018-04-02 12:39:13]  Returning JDBC Connection to DataSource
+1798245 DEBUG [2018-04-02 12:39:13]  Invoking ResponseBodyAdvice chain for body=RestMassage [code=200, json=Page{count=true, pageNum=6, pageSize=5, startRow=25, endRow=30, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1798245 DEBUG [2018-04-02 12:39:13]  After ResponseBodyAdvice chain body=RestMassage [code=200, json=Page{count=true, pageNum=6, pageSize=5, startRow=25, endRow=30, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1798245 DEBUG [2018-04-02 12:39:13]  Written [RestMassage [code=200, json=Page{count=true, pageNum=6, pageSize=5, startRow=25, endRow=30, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]] as "application/json;charset=utf-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@8216164]
+1798245 DEBUG [2018-04-02 12:39:13]  Null ModelAndView returned to DispatcherServlet with name 'DispatcherServlet': assuming HandlerAdapter completed request handling
+1798245 DEBUG [2018-04-02 12:39:13]  Successfully completed request
+1798588 DEBUG [2018-04-02 12:39:13]  DispatcherServlet with name 'DispatcherServlet' processing GET request for [/api/blogList/7]
+1798588 DEBUG [2018-04-02 12:39:13]  Looking up handler method for path /api/blogList/7
+1798588 DEBUG [2018-04-02 12:39:13]  Returning handler method [public com.moxiaowei.blog.util.RestMessage<java.util.List<com.moxiaowei.blog.pojo.Blog>> com.moxiaowei.blog.controller.BlogController.getBlogListAsyn(int)]
+1798588 DEBUG [2018-04-02 12:39:13]  Returning cached instance of singleton bean 'blogController'
+1798588 DEBUG [2018-04-02 12:39:13]  Last-Modified value for [/api/blogList/7] is: -1
+1798588 DEBUG [2018-04-02 12:39:13]  Creating new transaction with name [com.moxiaowei.blog.service.impl.BlogServiceImpl.getBlog]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+1798588 DEBUG [2018-04-02 12:39:13]  Acquired Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] for JDBC transaction
+1798588 DEBUG [2018-04-02 12:39:13]  Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] read-only
+1798588 DEBUG [2018-04-02 12:39:13]  Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] to manual commit
+1798588 DEBUG [2018-04-02 12:39:13]  Creating a new SqlSession
+1798588 DEBUG [2018-04-02 12:39:13]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@50d4caaa]
+1798588 DEBUG [2018-04-02 12:39:13]  JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] will be managed by Spring
+1798588 DEBUG [2018-04-02 12:39:13]  ==>  Preparing: SELECT count(*) FROM blog 
+1798588 DEBUG [2018-04-02 12:39:13]  ==> Parameters: 
+1798588 DEBUG [2018-04-02 12:39:13]  <==      Total: 1
+1798588 DEBUG [2018-04-02 12:39:13]  ==>  Preparing: select id, title, remark, creatdate, updatadate, author from blog order by readcount desc limit ?,? 
+1798588 DEBUG [2018-04-02 12:39:13]  ==> Parameters: 30(Integer), 5(Integer)
+1798588 DEBUG [2018-04-02 12:39:13]  <==      Total: 5
+1798603 DEBUG [2018-04-02 12:39:13]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@50d4caaa]
+1798603 DEBUG [2018-04-02 12:39:13]  Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@50d4caaa]
+1798603 DEBUG [2018-04-02 12:39:13]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@50d4caaa]
+1798603 DEBUG [2018-04-02 12:39:13]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@50d4caaa]
+1798603 DEBUG [2018-04-02 12:39:13]  Initiating transaction commit
+1798603 DEBUG [2018-04-02 12:39:13]  Committing JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1798603 DEBUG [2018-04-02 12:39:13]  Resetting read-only flag of JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1798603 DEBUG [2018-04-02 12:39:13]  Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] after transaction
+1798603 DEBUG [2018-04-02 12:39:13]  Returning JDBC Connection to DataSource
+1798603 DEBUG [2018-04-02 12:39:13]  Creating new transaction with name [com.moxiaowei.blog.service.impl.BlogServiceImpl.getBlogNew]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+1798603 DEBUG [2018-04-02 12:39:13]  Acquired Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] for JDBC transaction
+1798603 DEBUG [2018-04-02 12:39:13]  Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] read-only
+1798603 DEBUG [2018-04-02 12:39:13]  Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] to manual commit
+1798603 DEBUG [2018-04-02 12:39:13]  Creating a new SqlSession
+1798603 DEBUG [2018-04-02 12:39:13]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4481f947]
+1798603 DEBUG [2018-04-02 12:39:13]  JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] will be managed by Spring
+1798603 DEBUG [2018-04-02 12:39:13]  ==>  Preparing: SELECT count(*) FROM blog 
+1798603 DEBUG [2018-04-02 12:39:13]  ==> Parameters: 
+1798603 DEBUG [2018-04-02 12:39:13]  <==      Total: 1
+1798603 DEBUG [2018-04-02 12:39:13]  ==>  Preparing: select id, title, remark from blog order by creatdate desc limit ?,? 
+1798603 DEBUG [2018-04-02 12:39:13]  ==> Parameters: 0(Integer), 1(Integer)
+1798603 DEBUG [2018-04-02 12:39:13]  <==      Total: 1
+1798603 DEBUG [2018-04-02 12:39:13]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4481f947]
+1798603 DEBUG [2018-04-02 12:39:13]  Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4481f947]
+1798603 DEBUG [2018-04-02 12:39:13]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4481f947]
+1798603 DEBUG [2018-04-02 12:39:13]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4481f947]
+1798603 DEBUG [2018-04-02 12:39:13]  Initiating transaction commit
+1798603 DEBUG [2018-04-02 12:39:13]  Committing JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1798603 DEBUG [2018-04-02 12:39:13]  Resetting read-only flag of JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1798603 DEBUG [2018-04-02 12:39:13]  Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] after transaction
+1798603 DEBUG [2018-04-02 12:39:13]  Returning JDBC Connection to DataSource
+1798603 DEBUG [2018-04-02 12:39:13]  Invoking ResponseBodyAdvice chain for body=RestMassage [code=200, json=Page{count=true, pageNum=7, pageSize=5, startRow=30, endRow=35, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1798603 DEBUG [2018-04-02 12:39:13]  After ResponseBodyAdvice chain body=RestMassage [code=200, json=Page{count=true, pageNum=7, pageSize=5, startRow=30, endRow=35, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1798603 DEBUG [2018-04-02 12:39:13]  Written [RestMassage [code=200, json=Page{count=true, pageNum=7, pageSize=5, startRow=30, endRow=35, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]] as "application/json;charset=utf-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@8216164]
+1798603 DEBUG [2018-04-02 12:39:13]  Null ModelAndView returned to DispatcherServlet with name 'DispatcherServlet': assuming HandlerAdapter completed request handling
+1798603 DEBUG [2018-04-02 12:39:13]  Successfully completed request
+1798947 DEBUG [2018-04-02 12:39:13]  DispatcherServlet with name 'DispatcherServlet' processing GET request for [/api/blogList/8]
+1798947 DEBUG [2018-04-02 12:39:13]  Looking up handler method for path /api/blogList/8
+1798947 DEBUG [2018-04-02 12:39:13]  Returning handler method [public com.moxiaowei.blog.util.RestMessage<java.util.List<com.moxiaowei.blog.pojo.Blog>> com.moxiaowei.blog.controller.BlogController.getBlogListAsyn(int)]
+1798947 DEBUG [2018-04-02 12:39:13]  Returning cached instance of singleton bean 'blogController'
+1798947 DEBUG [2018-04-02 12:39:13]  Last-Modified value for [/api/blogList/8] is: -1
+1798947 DEBUG [2018-04-02 12:39:13]  Creating new transaction with name [com.moxiaowei.blog.service.impl.BlogServiceImpl.getBlog]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+1798947 DEBUG [2018-04-02 12:39:13]  Acquired Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] for JDBC transaction
+1798947 DEBUG [2018-04-02 12:39:13]  Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] read-only
+1798947 DEBUG [2018-04-02 12:39:13]  Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] to manual commit
+1798947 DEBUG [2018-04-02 12:39:13]  Creating a new SqlSession
+1798947 DEBUG [2018-04-02 12:39:13]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5e7b4f2f]
+1798947 DEBUG [2018-04-02 12:39:13]  JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] will be managed by Spring
+1798947 DEBUG [2018-04-02 12:39:13]  ==>  Preparing: SELECT count(*) FROM blog 
+1798947 DEBUG [2018-04-02 12:39:13]  ==> Parameters: 
+1798962 DEBUG [2018-04-02 12:39:13]  <==      Total: 1
+1798962 DEBUG [2018-04-02 12:39:13]  ==>  Preparing: select id, title, remark, creatdate, updatadate, author from blog order by readcount desc limit ?,? 
+1798962 DEBUG [2018-04-02 12:39:13]  ==> Parameters: 35(Integer), 5(Integer)
+1798962 DEBUG [2018-04-02 12:39:13]  <==      Total: 5
+1798962 DEBUG [2018-04-02 12:39:13]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5e7b4f2f]
+1798962 DEBUG [2018-04-02 12:39:13]  Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5e7b4f2f]
+1798962 DEBUG [2018-04-02 12:39:13]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5e7b4f2f]
+1798962 DEBUG [2018-04-02 12:39:13]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5e7b4f2f]
+1798962 DEBUG [2018-04-02 12:39:13]  Initiating transaction commit
+1798962 DEBUG [2018-04-02 12:39:13]  Committing JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1798978 DEBUG [2018-04-02 12:39:14]  Resetting read-only flag of JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1798978 DEBUG [2018-04-02 12:39:14]  Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] after transaction
+1798978 DEBUG [2018-04-02 12:39:14]  Returning JDBC Connection to DataSource
+1798978 DEBUG [2018-04-02 12:39:14]  Creating new transaction with name [com.moxiaowei.blog.service.impl.BlogServiceImpl.getBlogNew]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+1798978 DEBUG [2018-04-02 12:39:14]  Acquired Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] for JDBC transaction
+1798978 DEBUG [2018-04-02 12:39:14]  Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] read-only
+1798978 DEBUG [2018-04-02 12:39:14]  Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] to manual commit
+1798978 DEBUG [2018-04-02 12:39:14]  Creating a new SqlSession
+1798978 DEBUG [2018-04-02 12:39:14]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@658deb4f]
+1798978 DEBUG [2018-04-02 12:39:14]  JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] will be managed by Spring
+1798978 DEBUG [2018-04-02 12:39:14]  ==>  Preparing: SELECT count(*) FROM blog 
+1798978 DEBUG [2018-04-02 12:39:14]  ==> Parameters: 
+1798978 DEBUG [2018-04-02 12:39:14]  <==      Total: 1
+1798978 DEBUG [2018-04-02 12:39:14]  ==>  Preparing: select id, title, remark from blog order by creatdate desc limit ?,? 
+1798978 DEBUG [2018-04-02 12:39:14]  ==> Parameters: 0(Integer), 1(Integer)
+1798978 DEBUG [2018-04-02 12:39:14]  <==      Total: 1
+1798978 DEBUG [2018-04-02 12:39:14]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@658deb4f]
+1798978 DEBUG [2018-04-02 12:39:14]  Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@658deb4f]
+1798978 DEBUG [2018-04-02 12:39:14]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@658deb4f]
+1798978 DEBUG [2018-04-02 12:39:14]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@658deb4f]
+1798978 DEBUG [2018-04-02 12:39:14]  Initiating transaction commit
+1798978 DEBUG [2018-04-02 12:39:14]  Committing JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1798978 DEBUG [2018-04-02 12:39:14]  Resetting read-only flag of JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1798978 DEBUG [2018-04-02 12:39:14]  Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] after transaction
+1798978 DEBUG [2018-04-02 12:39:14]  Returning JDBC Connection to DataSource
+1798978 DEBUG [2018-04-02 12:39:14]  Invoking ResponseBodyAdvice chain for body=RestMassage [code=200, json=Page{count=true, pageNum=8, pageSize=5, startRow=35, endRow=40, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1798978 DEBUG [2018-04-02 12:39:14]  After ResponseBodyAdvice chain body=RestMassage [code=200, json=Page{count=true, pageNum=8, pageSize=5, startRow=35, endRow=40, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1798993 DEBUG [2018-04-02 12:39:14]  Written [RestMassage [code=200, json=Page{count=true, pageNum=8, pageSize=5, startRow=35, endRow=40, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]] as "application/json;charset=utf-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@8216164]
+1798993 DEBUG [2018-04-02 12:39:14]  Null ModelAndView returned to DispatcherServlet with name 'DispatcherServlet': assuming HandlerAdapter completed request handling
+1798993 DEBUG [2018-04-02 12:39:14]  Successfully completed request
+1799274 DEBUG [2018-04-02 12:39:14]  DispatcherServlet with name 'DispatcherServlet' processing GET request for [/api/blogList/9]
+1799274 DEBUG [2018-04-02 12:39:14]  Looking up handler method for path /api/blogList/9
+1799274 DEBUG [2018-04-02 12:39:14]  Returning handler method [public com.moxiaowei.blog.util.RestMessage<java.util.List<com.moxiaowei.blog.pojo.Blog>> com.moxiaowei.blog.controller.BlogController.getBlogListAsyn(int)]
+1799274 DEBUG [2018-04-02 12:39:14]  Returning cached instance of singleton bean 'blogController'
+1799274 DEBUG [2018-04-02 12:39:14]  Last-Modified value for [/api/blogList/9] is: -1
+1799274 DEBUG [2018-04-02 12:39:14]  Creating new transaction with name [com.moxiaowei.blog.service.impl.BlogServiceImpl.getBlog]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+1799274 DEBUG [2018-04-02 12:39:14]  Acquired Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] for JDBC transaction
+1799274 DEBUG [2018-04-02 12:39:14]  Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] read-only
+1799274 DEBUG [2018-04-02 12:39:14]  Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] to manual commit
+1799274 DEBUG [2018-04-02 12:39:14]  Creating a new SqlSession
+1799274 DEBUG [2018-04-02 12:39:14]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f57976c]
+1799274 DEBUG [2018-04-02 12:39:14]  JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] will be managed by Spring
+1799274 DEBUG [2018-04-02 12:39:14]  ==>  Preparing: SELECT count(*) FROM blog 
+1799274 DEBUG [2018-04-02 12:39:14]  ==> Parameters: 
+1799274 DEBUG [2018-04-02 12:39:14]  <==      Total: 1
+1799274 DEBUG [2018-04-02 12:39:14]  ==>  Preparing: select id, title, remark, creatdate, updatadate, author from blog order by readcount desc limit ?,? 
+1799290 DEBUG [2018-04-02 12:39:14]  ==> Parameters: 40(Integer), 5(Integer)
+1799290 DEBUG [2018-04-02 12:39:14]  <==      Total: 5
+1799290 DEBUG [2018-04-02 12:39:14]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f57976c]
+1799290 DEBUG [2018-04-02 12:39:14]  Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f57976c]
+1799290 DEBUG [2018-04-02 12:39:14]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f57976c]
+1799290 DEBUG [2018-04-02 12:39:14]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f57976c]
+1799290 DEBUG [2018-04-02 12:39:14]  Initiating transaction commit
+1799290 DEBUG [2018-04-02 12:39:14]  Committing JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1799290 DEBUG [2018-04-02 12:39:14]  Resetting read-only flag of JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1799290 DEBUG [2018-04-02 12:39:14]  Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] after transaction
+1799290 DEBUG [2018-04-02 12:39:14]  Returning JDBC Connection to DataSource
+1799290 DEBUG [2018-04-02 12:39:14]  Creating new transaction with name [com.moxiaowei.blog.service.impl.BlogServiceImpl.getBlogNew]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+1799290 DEBUG [2018-04-02 12:39:14]  Acquired Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] for JDBC transaction
+1799290 DEBUG [2018-04-02 12:39:14]  Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] read-only
+1799290 DEBUG [2018-04-02 12:39:14]  Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] to manual commit
+1799290 DEBUG [2018-04-02 12:39:14]  Creating a new SqlSession
+1799290 DEBUG [2018-04-02 12:39:14]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@84963ea]
+1799290 DEBUG [2018-04-02 12:39:14]  JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] will be managed by Spring
+1799290 DEBUG [2018-04-02 12:39:14]  ==>  Preparing: SELECT count(*) FROM blog 
+1799290 DEBUG [2018-04-02 12:39:14]  ==> Parameters: 
+1799290 DEBUG [2018-04-02 12:39:14]  <==      Total: 1
+1799290 DEBUG [2018-04-02 12:39:14]  ==>  Preparing: select id, title, remark from blog order by creatdate desc limit ?,? 
+1799290 DEBUG [2018-04-02 12:39:14]  ==> Parameters: 0(Integer), 1(Integer)
+1799290 DEBUG [2018-04-02 12:39:14]  <==      Total: 1
+1799290 DEBUG [2018-04-02 12:39:14]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@84963ea]
+1799290 DEBUG [2018-04-02 12:39:14]  Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@84963ea]
+1799290 DEBUG [2018-04-02 12:39:14]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@84963ea]
+1799290 DEBUG [2018-04-02 12:39:14]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@84963ea]
+1799290 DEBUG [2018-04-02 12:39:14]  Initiating transaction commit
+1799290 DEBUG [2018-04-02 12:39:14]  Committing JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1799305 DEBUG [2018-04-02 12:39:14]  Resetting read-only flag of JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1799305 DEBUG [2018-04-02 12:39:14]  Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] after transaction
+1799305 DEBUG [2018-04-02 12:39:14]  Returning JDBC Connection to DataSource
+1799305 DEBUG [2018-04-02 12:39:14]  Invoking ResponseBodyAdvice chain for body=RestMassage [code=200, json=Page{count=true, pageNum=9, pageSize=5, startRow=40, endRow=45, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1799305 DEBUG [2018-04-02 12:39:14]  After ResponseBodyAdvice chain body=RestMassage [code=200, json=Page{count=true, pageNum=9, pageSize=5, startRow=40, endRow=45, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1799305 DEBUG [2018-04-02 12:39:14]  Written [RestMassage [code=200, json=Page{count=true, pageNum=9, pageSize=5, startRow=40, endRow=45, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]] as "application/json;charset=utf-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@8216164]
+1799305 DEBUG [2018-04-02 12:39:14]  Null ModelAndView returned to DispatcherServlet with name 'DispatcherServlet': assuming HandlerAdapter completed request handling
+1799305 DEBUG [2018-04-02 12:39:14]  Successfully completed request
+1799586 DEBUG [2018-04-02 12:39:14]  DispatcherServlet with name 'DispatcherServlet' processing GET request for [/api/blogList/10]
+1799586 DEBUG [2018-04-02 12:39:14]  Looking up handler method for path /api/blogList/10
+1799586 DEBUG [2018-04-02 12:39:14]  Returning handler method [public com.moxiaowei.blog.util.RestMessage<java.util.List<com.moxiaowei.blog.pojo.Blog>> com.moxiaowei.blog.controller.BlogController.getBlogListAsyn(int)]
+1799586 DEBUG [2018-04-02 12:39:14]  Returning cached instance of singleton bean 'blogController'
+1799586 DEBUG [2018-04-02 12:39:14]  Last-Modified value for [/api/blogList/10] is: -1
+1799586 DEBUG [2018-04-02 12:39:14]  Creating new transaction with name [com.moxiaowei.blog.service.impl.BlogServiceImpl.getBlog]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+1799586 DEBUG [2018-04-02 12:39:14]  Acquired Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] for JDBC transaction
+1799586 DEBUG [2018-04-02 12:39:14]  Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] read-only
+1799586 DEBUG [2018-04-02 12:39:14]  Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] to manual commit
+1799586 DEBUG [2018-04-02 12:39:14]  Creating a new SqlSession
+1799586 DEBUG [2018-04-02 12:39:14]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@69b7d245]
+1799586 DEBUG [2018-04-02 12:39:14]  JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] will be managed by Spring
+1799586 DEBUG [2018-04-02 12:39:14]  ==>  Preparing: SELECT count(*) FROM blog 
+1799586 DEBUG [2018-04-02 12:39:14]  ==> Parameters: 
+1799586 DEBUG [2018-04-02 12:39:14]  <==      Total: 1
+1799586 DEBUG [2018-04-02 12:39:14]  ==>  Preparing: select id, title, remark, creatdate, updatadate, author from blog order by readcount desc limit ?,? 
+1799586 DEBUG [2018-04-02 12:39:14]  ==> Parameters: 45(Integer), 5(Integer)
+1799602 DEBUG [2018-04-02 12:39:14]  <==      Total: 5
+1799602 DEBUG [2018-04-02 12:39:14]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@69b7d245]
+1799602 DEBUG [2018-04-02 12:39:14]  Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@69b7d245]
+1799602 DEBUG [2018-04-02 12:39:14]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@69b7d245]
+1799602 DEBUG [2018-04-02 12:39:14]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@69b7d245]
+1799602 DEBUG [2018-04-02 12:39:14]  Initiating transaction commit
+1799602 DEBUG [2018-04-02 12:39:14]  Committing JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1799602 DEBUG [2018-04-02 12:39:14]  Resetting read-only flag of JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1799602 DEBUG [2018-04-02 12:39:14]  Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] after transaction
+1799602 DEBUG [2018-04-02 12:39:14]  Returning JDBC Connection to DataSource
+1799602 DEBUG [2018-04-02 12:39:14]  Creating new transaction with name [com.moxiaowei.blog.service.impl.BlogServiceImpl.getBlogNew]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+1799602 DEBUG [2018-04-02 12:39:14]  Acquired Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] for JDBC transaction
+1799602 DEBUG [2018-04-02 12:39:14]  Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] read-only
+1799602 DEBUG [2018-04-02 12:39:14]  Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] to manual commit
+1799602 DEBUG [2018-04-02 12:39:14]  Creating a new SqlSession
+1799602 DEBUG [2018-04-02 12:39:14]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@316ee737]
+1799602 DEBUG [2018-04-02 12:39:14]  JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] will be managed by Spring
+1799602 DEBUG [2018-04-02 12:39:14]  ==>  Preparing: SELECT count(*) FROM blog 
+1799602 DEBUG [2018-04-02 12:39:14]  ==> Parameters: 
+1799602 DEBUG [2018-04-02 12:39:14]  <==      Total: 1
+1799602 DEBUG [2018-04-02 12:39:14]  ==>  Preparing: select id, title, remark from blog order by creatdate desc limit ?,? 
+1799602 DEBUG [2018-04-02 12:39:14]  ==> Parameters: 0(Integer), 1(Integer)
+1799602 DEBUG [2018-04-02 12:39:14]  <==      Total: 1
+1799602 DEBUG [2018-04-02 12:39:14]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@316ee737]
+1799602 DEBUG [2018-04-02 12:39:14]  Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@316ee737]
+1799602 DEBUG [2018-04-02 12:39:14]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@316ee737]
+1799602 DEBUG [2018-04-02 12:39:14]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@316ee737]
+1799602 DEBUG [2018-04-02 12:39:14]  Initiating transaction commit
+1799602 DEBUG [2018-04-02 12:39:14]  Committing JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1799617 DEBUG [2018-04-02 12:39:14]  Resetting read-only flag of JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746]
+1799617 DEBUG [2018-04-02 12:39:14]  Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c5dc746] after transaction
+1799617 DEBUG [2018-04-02 12:39:14]  Returning JDBC Connection to DataSource
+1799617 DEBUG [2018-04-02 12:39:14]  Invoking ResponseBodyAdvice chain for body=RestMassage [code=200, json=Page{count=true, pageNum=10, pageSize=5, startRow=45, endRow=50, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1799617 DEBUG [2018-04-02 12:39:14]  After ResponseBodyAdvice chain body=RestMassage [code=200, json=Page{count=true, pageNum=10, pageSize=5, startRow=45, endRow=50, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]
+1799617 DEBUG [2018-04-02 12:39:14]  Written [RestMassage [code=200, json=Page{count=true, pageNum=10, pageSize=5, startRow=45, endRow=50, total=97, pages=20, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}]] as "application/json;charset=utf-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@8216164]
+1799617 DEBUG [2018-04-02 12:39:14]  Null ModelAndView returned to DispatcherServlet with name 'DispatcherServlet': assuming HandlerAdapter completed request handling
+1799617 DEBUG [2018-04-02 12:39:14]  Successfully completed request

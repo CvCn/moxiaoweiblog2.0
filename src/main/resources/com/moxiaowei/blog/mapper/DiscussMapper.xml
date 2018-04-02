@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.moxiaowei.blog.mapper.DiscussMapper">
+	<resultMap type="discuss" id="dmap">
+		<id column="id" property="id" />
+		<result property="fuserid" column="fuserid" />
+		<result property="content" column="content" />
+		<result property="createdate" column="createdate" />
+		<result property="updatedate" column="updatedate" />
+		<result property="parentid" column="parentid" />
+		<result property="blogid" column="blogid" />
+		<collection property="dislist" ofType="Discuss"
+			column="{parentid=id, blogid=blogid}" select="com.moxiaowei.blog.mapper.DiscussMapper.getDiscussByParentid"></collection>
+		<collection property="fuser" ofType="FUser" column="{id=fuserid}"
+			select="com.moxiaowei.blog.mapper.FUserMapper.getFUserBy"></collection>
+	</resultMap>
+	<select id="getDiscussBy" resultMap="dmap">
+		select id, content, createdate, updatedate, blogid, fuserid, parentid
+		from discuss
+		<if test="d != null">
+		<where>
+			<if test="d.blogid > 0">
+				and blogid=#{d.blogid}
+			</if>
+			<if test="d.fuserid > 0">
+				and fuserid=#{d.fuserid}
+			</if>
+			<if test="d.id > 0">
+				and id=#{d.id}
+			</if>
+			<if test="d.parentid >= 0 and d.parentid != null">
+				and parentid=#{d.parentid}
+			</if>
+		</where>
+		</if>
+		order by updatedate
+		<if test="de == true">
+			desc
+		</if>
+	</select>
+	<resultMap type="discuss" id="dmap2">
+		<result property="fuserid" column="fuserid" />
+		<collection property="fuser" ofType="FUser" column="{id=fuserid}"
+			select="com.moxiaowei.blog.mapper.FUserMapper.getFUserBy"></collection>
+	</resultMap>
+	<select id="getDiscussByParentid" resultMap="dmap2">
+		select id, content,
+		createdate, updatedate, blogid, fuserid, parentid
+		from discuss
+		where blogid=#{blogid} and parentid=#{parentid}
+		order by updatedate
+	</select>
+
+	<resultMap type="discuss" id="gmap">
+		<id column="id" property="id" />
+		<result column="blogid" property="blogid" />
+		<association property="blog" column="{blog.id=blogid}"
+			javaType="blog" select="com.moxiaowei.blog.mapper.BlogMapper.getBlogBy2"></association>
+	</resultMap>
+	<select id="getDiscussByFUser" resultType="discuss">
+		select id, content,
+		createdate, updatedate, blogid, fuserid, parentid
+		from discuss
+		where fuserid=#{0} order by updatedate desc
+	</select>
+	<insert id="addDiscuss">
+		insert into discuss values(#{id}, #{content},
+		#{createdate}, #{updatedate}, #{blogid}, #{fuserid}, #{parentid})
+	</insert>
+	<delete id="delDiscuss">
+		delete from discuss where id=#{0} and fuserid=#{1}
+	</delete>
+	<delete id="delDiscussByParentid">
+		delete from discuss where parentid=#{0}
+	</delete>
+	<delete id="delDiscuss2">
+		delete from discuss where id=#{0}
+	</delete>
+	<update id="updDiscuss">
+		update discuss
+		<set>
+			<if test="content != null and content != ''">
+				content=#{content}
+			</if>
+			<if test="createdate != null">
+				createdate=#{createdate}
+			</if>
+			<if test="updatedate != null">
+				updatedate=#{updatedate}
+			</if>
+		</set>
+		where id=#{id} and fuserid=#{fuserid}
+	</update>
+</mapper>

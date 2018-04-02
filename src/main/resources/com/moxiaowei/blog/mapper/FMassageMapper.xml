@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.moxiaowei.blog.mapper.FMassageMapper">
+	<select id="getFMassage" resultType="fmassage">
+		select id, parentid, childid, blogid, state, dfuserid, true de from fmassage 
+			where dfuserid=#{0}	
+			order by disdate desc
+	</select>
+	<select id="getStateIsZero" resultType="int">
+		select count(id) from fmassage where dfuserid=#{0} and state=0
+	</select>
+	<insert id="addFMassage">
+		insert into fmassage values(default, #{parentid}, #{childid}, #{blogid}, #{state}, #{dfuserid}, now());
+	</insert>
+	<delete id="delFMassage">
+		delete from fmassage where id=#{0} and dfuserid=#{1}
+	</delete>
+	<delete id="empty">
+		delete from fmassage where dfuserid=#{0}
+	</delete>
+	<update id="updstate">
+		update fmassage set state = 1 where dfuserid=#{0}
+	</update>
+</mapper>

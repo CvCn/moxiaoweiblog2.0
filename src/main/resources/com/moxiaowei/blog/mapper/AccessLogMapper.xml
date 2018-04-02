@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.moxiaowei.blog.mapper.AccessLogMapper">
+	<select id="getAccessLog" resultType="accesslog">
+		select id, path, accessdate, ip, address from accesslog order by accessdate desc
+	</select>
+	<insert id="addAccessLog">
+		insert into accesslog values(default, #{path}, now(), #{ip}, #{address})
+	</insert>
+	<delete id="delAccess">
+		delete from accesslog where id=#{0}
+	</delete>
+</mapper>
