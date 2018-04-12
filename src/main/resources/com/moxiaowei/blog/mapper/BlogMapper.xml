@@ -11,10 +11,10 @@
 			values(#{blog.id}, #{blog.title}, #{blog.content}, #{blog.creatdate}, #{blog.updatadate}, #{blog.remark}, #{blog.author})
 	</insert>
 	<select id="getBlog" resultType="blog">
-		select id, title, remark, creatdate, updatadate, author from blog order by readcount desc
+		select id, title, remark, creatdate, updatadate, readcount, author from blog order by readcount desc
 	</select>
 	<select id="getBlogNew" resultType="blog">
-		select id, title, remark from blog order by creatdate desc
+		select id, title, remark, creatdate, updatadate, readcount, author from blog order by creatdate desc
 	</select>
 	<select id="getBlogBy" resultType="blog">
 		select id, title, content, creatdate, updatadate, readcount, remark, author from blog

@@ -32,7 +32,7 @@ public class IDUtils {
 		//long millis = System.nanoTime();
 		//加上两位随机数
 		Random random = new Random();
-		int end2 = random.nextInt(100);
+		int end2 = random.nextInt(10000)/100;
 		//如果不足两位前面补0
 		String str = millis + String.format("%02d", end2);
 		long id = new Long(str);

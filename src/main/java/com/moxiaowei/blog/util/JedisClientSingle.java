@@ -1,12 +1,11 @@
 package com.moxiaowei.blog.util;
 
-import java.util.Set;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
+
+import java.util.Set;
 
 /**
  * 封装redis操作工具
@@ -88,20 +87,4 @@ public class JedisClientSingle {
 		jedis.close();
 		return keys;
 	}
-	
-	/**
-	 * 向有序集合添加一个或多个成员，或者更新已存在成员的分数
-	 * @param key
-	 * @param score
-	 * @param member
-	 * @return
-	 * @author moxiaowei
-	 */
-//	public long zadd(String key, double score, String member) {
-//		Jedis jedis = jedisPool.getResource();
-//		Long zadd = jedis.zadd(key, score, member);
-//		jedis.close();
-//		return zadd;
-//	}
-
 }
