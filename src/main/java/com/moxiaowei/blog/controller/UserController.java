@@ -1,20 +1,5 @@
 package com.moxiaowei.blog.controller;
 
-import java.util.Date;
-import java.util.List;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-
 import com.github.pagehelper.PageInfo;
 import com.moxiaowei.blog.pojo.AccessLog;
 import com.moxiaowei.blog.pojo.Blog;
@@ -24,6 +9,19 @@ import com.moxiaowei.blog.service.BlogService;
 import com.moxiaowei.blog.service.UserService;
 import com.moxiaowei.blog.util.IDUtils;
 import com.moxiaowei.blog.util.JedisClientSingle;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import java.util.Date;
+import java.util.List;
 
 @Controller
 @RequestMapping("/api/user")
@@ -43,7 +41,7 @@ public class UserController {
 
     @RequestMapping("/login")
     public String login(String pwd, HttpSession session, HttpServletRequest req) {
-        if (pwd != null && pwd.equals("")) {
+        if (pwd != null && !pwd.equals("")) {
             Boolean login = this.userServiceImpl.login(pwd);
             session.setAttribute("flag", login);
             if (login) {
@@ -154,13 +152,9 @@ public class UserController {
 
     /**
      * 获取博客列表，用于管理员界面
-     *
-     * @param page
-     * @param rows
-     *
+     * @param pageNum 1
+     * @param pageSize 10
      * @return
-     *
-     * @author moxiaowei
      */
     @RequestMapping(value = "/getBlog", produces = MediaType.APPLICATION_JSON_VALUE + ";charset=utf-8")
     @ResponseBody
