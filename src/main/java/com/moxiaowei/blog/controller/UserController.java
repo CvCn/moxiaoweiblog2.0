@@ -60,7 +60,7 @@ public class UserController {
     @RequestMapping(value = "/add", produces = MediaType.APPLICATION_JSON_VALUE + ";charset=utf-8")
     @ResponseBody
     public boolean addBlog(String title, String content, String remark, String author) {
-        if (title.equals("") && content.equals("")) {
+        if (!title.equals("") && !content.equals("")) {
             boolean addBlog = this.userServiceImpl.addBlog(new Blog(IDUtils.genItemId(), title, content.getBytes(),
                     new Date(), new Date(), 0, remark, author));
             if (addBlog) {
