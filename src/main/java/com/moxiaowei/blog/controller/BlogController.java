@@ -3,7 +3,9 @@ package com.moxiaowei.blog.controller;
 import com.github.pagehelper.PageInfo;
 import com.moxiaowei.blog.pojo.Blog;
 import com.moxiaowei.blog.service.BlogService;
+import com.moxiaowei.blog.util.JedisClientSingle;
 import com.moxiaowei.blog.util.RestMessage;
+import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -27,6 +29,9 @@ public class BlogController {
 
 	@Autowired
 	private BlogService blogServiceImpl;
+
+	@Autowired
+	private JedisClientSingle jedisClientSingle;
 	
 	
 	@RequestMapping(
@@ -65,13 +70,38 @@ public class BlogController {
 			method=RequestMethod.GET)
 	@ResponseBody
 	public RestMessage<Blog> getBlog(@PathVariable long id){
-		Blog blog = this.blogServiceImpl.getBlogById(id);
-		RestMessage<Blog> rm = new RestMessage<>();
-		if(blog == null) return rm;
-		blog.setContent2(new String(blog.getContent()));
-		blog.setContent(null);
+
 		this.blogServiceImpl.addreadcount(id);
-		rm.set200(blog);
+
+		RestMessage<Blog> rm = new RestMessage<>();
+
+		String blogR = this.jedisClientSingle.get("BLOG_" + id);
+
+		ObjectMapper mapper = new ObjectMapper();
+
+		try {
+			if(blogR == null){
+				Blog blog = this.blogServiceImpl.getBlogById(id);
+				if(blog == null) return rm;
+				blog.setContent2(new String(blog.getContent()));
+				blog.setContent(null);
+
+				rm.set200(blog);
+
+				String b = mapper.writeValueAsString(blog);
+				this.jedisClientSingle.set("BLOG_" + blog.getId(), b);
+				this.jedisClientSingle.expire("BLOG_" + blog.getId(), 60*24*7);
+			}else{
+				rm.set200(mapper.readValue(blogR, Blog.class));
+			}
+		}catch (Exception e){
+			e.printStackTrace();
+			return rm;
+		}
+
+
+
+
 		return rm;
 	}
 
